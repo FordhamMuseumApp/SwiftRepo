@@ -1,0 +1,293 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		686C8DDC1C86837B006DC5D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C8DDB1C86837B006DC5D1 /* AppDelegate.swift */; };
+		686C8DDE1C86837B006DC5D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C8DDD1C86837B006DC5D1 /* ViewController.swift */; };
+		686C8DE11C86837B006DC5D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C8DDF1C86837B006DC5D1 /* Main.storyboard */; };
+		686C8DE31C86837B006DC5D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686C8DE21C86837B006DC5D1 /* Assets.xcassets */; };
+		686C8DE61C86837B006DC5D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C8DE41C86837B006DC5D1 /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		686C8DD81C86837B006DC5D1 /* FordhamMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FordhamMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		686C8DDB1C86837B006DC5D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		686C8DDD1C86837B006DC5D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		686C8DE01C86837B006DC5D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		686C8DE21C86837B006DC5D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		686C8DE51C86837B006DC5D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		686C8DE71C86837C006DC5D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		686C8DD51C86837B006DC5D1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		686C8DCF1C86837B006DC5D1 = {
+			isa = PBXGroup;
+			children = (
+				686C8DDA1C86837B006DC5D1 /* FordhamMuseum */,
+				686C8DD91C86837B006DC5D1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		686C8DD91C86837B006DC5D1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				686C8DD81C86837B006DC5D1 /* FordhamMuseum.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		686C8DDA1C86837B006DC5D1 /* FordhamMuseum */ = {
+			isa = PBXGroup;
+			children = (
+				686C8DDB1C86837B006DC5D1 /* AppDelegate.swift */,
+				686C8DDD1C86837B006DC5D1 /* ViewController.swift */,
+				686C8DDF1C86837B006DC5D1 /* Main.storyboard */,
+				686C8DE21C86837B006DC5D1 /* Assets.xcassets */,
+				686C8DE41C86837B006DC5D1 /* LaunchScreen.storyboard */,
+				686C8DE71C86837C006DC5D1 /* Info.plist */,
+			);
+			path = FordhamMuseum;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		686C8DD71C86837B006DC5D1 /* FordhamMuseum */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 686C8DEA1C86837C006DC5D1 /* Build configuration list for PBXNativeTarget "FordhamMuseum" */;
+			buildPhases = (
+				686C8DD41C86837B006DC5D1 /* Sources */,
+				686C8DD51C86837B006DC5D1 /* Frameworks */,
+				686C8DD61C86837B006DC5D1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FordhamMuseum;
+			productName = FordhamMuseum;
+			productReference = 686C8DD81C86837B006DC5D1 /* FordhamMuseum.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		686C8DD01C86837B006DC5D1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = FordhamMuseumApp;
+				TargetAttributes = {
+					686C8DD71C86837B006DC5D1 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 686C8DD31C86837B006DC5D1 /* Build configuration list for PBXProject "FordhamMuseum" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 686C8DCF1C86837B006DC5D1;
+			productRefGroup = 686C8DD91C86837B006DC5D1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				686C8DD71C86837B006DC5D1 /* FordhamMuseum */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		686C8DD61C86837B006DC5D1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				686C8DE61C86837B006DC5D1 /* LaunchScreen.storyboard in Resources */,
+				686C8DE31C86837B006DC5D1 /* Assets.xcassets in Resources */,
+				686C8DE11C86837B006DC5D1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		686C8DD41C86837B006DC5D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				686C8DDE1C86837B006DC5D1 /* ViewController.swift in Sources */,
+				686C8DDC1C86837B006DC5D1 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		686C8DDF1C86837B006DC5D1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				686C8DE01C86837B006DC5D1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		686C8DE41C86837B006DC5D1 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				686C8DE51C86837B006DC5D1 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		686C8DE81C86837C006DC5D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		686C8DE91C86837C006DC5D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		686C8DEB1C86837C006DC5D1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FordhamMuseum/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.FordhamMuseum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		686C8DEC1C86837C006DC5D1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FordhamMuseum/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.app.FordhamMuseum;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		686C8DD31C86837B006DC5D1 /* Build configuration list for PBXProject "FordhamMuseum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				686C8DE81C86837C006DC5D1 /* Debug */,
+				686C8DE91C86837C006DC5D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		686C8DEA1C86837C006DC5D1 /* Build configuration list for PBXNativeTarget "FordhamMuseum" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				686C8DEB1C86837C006DC5D1 /* Debug */,
+				686C8DEC1C86837C006DC5D1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 686C8DD01C86837B006DC5D1 /* Project object */;
+}
