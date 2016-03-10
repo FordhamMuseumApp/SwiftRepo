@@ -6,6 +6,7 @@
 
 **Design Questions**
 - [ ] Where do we put the twitter login? How do we let people tweet about their favorite objects? Do we give access to camera?
+- [ ] Can we create the Tab View Controller programmatically so that we do not need to have 3 different view controllers for the greek, etruscan, and roman filters?
 
 **Design Features**
 - [ ] Fordham Maroon and Benjamin Moore Blueberry color scheme
