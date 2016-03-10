@@ -7,6 +7,8 @@
 
 These are the following **required** functionality:
 
+- [ ] Home screen with welcome and use information
+- [ ] Collection View that is populated with museum artifacts and info.
 - [ ] Table View that is populated with museum artifacts and info.
 - [ ] Main View controller has a tab bar that allows you to select between greek, roman, and etruscan search views.
 - [ ] Main View controller has a search view that filters artifacts
@@ -15,10 +17,9 @@ These are the following **required** functionality:
 - [ ] The cells of the Table View use auto-layout.
 - [ ] You can tap on each cell to access a detail view of the selected artifact.
 - [ ] The Detail View includes the image, name, description and, for some artifacts, audio.
-- [ ] In the Detail View there is the option to access a modal view where you can give rating/user feedback on an artifact.
-
-
-
+- [ ] In the Detail View there is the option to access a Twitter with OAuth where you can give rating/user feedback on an artifact.
+- [ ] Creation of FordhamMuseum Twitter feed to show live tweets, give ability to tweet at fordhammuseum and object hashtags
+- [ ] Create hashtags for the objects
       
 ## License
       
