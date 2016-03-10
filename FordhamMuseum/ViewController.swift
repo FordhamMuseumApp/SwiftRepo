@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         print("We merged the fork!")
+        print(" We fixed the branch!")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
