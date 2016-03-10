@@ -12,6 +12,8 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("We merged the fork!")
         // Do any additional setup after loading the view, typically from a nib.
     }
 
