@@ -8,20 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		686C8DDC1C86837B006DC5D1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C8DDB1C86837B006DC5D1 /* AppDelegate.swift */; };
-		686C8DDE1C86837B006DC5D1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 686C8DDD1C86837B006DC5D1 /* ViewController.swift */; };
 		686C8DE11C86837B006DC5D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C8DDF1C86837B006DC5D1 /* Main.storyboard */; };
 		686C8DE31C86837B006DC5D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686C8DE21C86837B006DC5D1 /* Assets.xcassets */; };
 		686C8DE61C86837B006DC5D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C8DE41C86837B006DC5D1 /* LaunchScreen.storyboard */; };
+		F9AB21EB1C91FB6B00056BF4 /* WeclomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB21EA1C91FB6B00056BF4 /* WeclomeViewController.swift */; };
+		F9AB21F01C9202B300056BF4 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB21EF1C9202B300056BF4 /* CollectionViewController.swift */; };
+		F9AB21F21C92038900056BF4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB21F11C92038900056BF4 /* DetailViewController.swift */; };
+		F9AB21F41C92039700056BF4 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB21F31C92039700056BF4 /* TwitterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		686C8DD81C86837B006DC5D1 /* FordhamMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FordhamMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		686C8DDB1C86837B006DC5D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		686C8DDD1C86837B006DC5D1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		686C8DE01C86837B006DC5D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		686C8DE21C86837B006DC5D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		686C8DE51C86837B006DC5D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		686C8DE71C86837C006DC5D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9AB21EA1C91FB6B00056BF4 /* WeclomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeclomeViewController.swift; sourceTree = "<group>"; };
+		F9AB21EF1C9202B300056BF4 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		F9AB21F11C92038900056BF4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		F9AB21F31C92039700056BF4 /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterViewController.swift; path = ../TwitterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,13 +61,24 @@
 			isa = PBXGroup;
 			children = (
 				686C8DDB1C86837B006DC5D1 /* AppDelegate.swift */,
-				686C8DDD1C86837B006DC5D1 /* ViewController.swift */,
+				F9AB21EE1C91FDAE00056BF4 /* ViewControllers */,
 				686C8DDF1C86837B006DC5D1 /* Main.storyboard */,
 				686C8DE21C86837B006DC5D1 /* Assets.xcassets */,
 				686C8DE41C86837B006DC5D1 /* LaunchScreen.storyboard */,
 				686C8DE71C86837C006DC5D1 /* Info.plist */,
 			);
 			path = FordhamMuseum;
+			sourceTree = "<group>";
+		};
+		F9AB21EE1C91FDAE00056BF4 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F9AB21F31C92039700056BF4 /* TwitterViewController.swift */,
+				F9AB21EF1C9202B300056BF4 /* CollectionViewController.swift */,
+				F9AB21F11C92038900056BF4 /* DetailViewController.swift */,
+				F9AB21EA1C91FB6B00056BF4 /* WeclomeViewController.swift */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +152,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				686C8DDE1C86837B006DC5D1 /* ViewController.swift in Sources */,
+				F9AB21F01C9202B300056BF4 /* CollectionViewController.swift in Sources */,
 				686C8DDC1C86837B006DC5D1 /* AppDelegate.swift in Sources */,
+				F9AB21F41C92039700056BF4 /* TwitterViewController.swift in Sources */,
+				F9AB21EB1C91FB6B00056BF4 /* WeclomeViewController.swift in Sources */,
+				F9AB21F21C92038900056BF4 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,6 +306,7 @@
 				686C8DEC1C86837C006DC5D1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

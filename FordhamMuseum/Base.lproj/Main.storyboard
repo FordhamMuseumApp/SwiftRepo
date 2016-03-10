@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Weclome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeclomeViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,12 +16,182 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Fordham Museum of Greek, Roman, and Etruscan Art!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gX-rq-CVi">
+                                <rect key="frame" x="20" y="40" width="280" height="251"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbw-BI-v53">
+                                <rect key="frame" x="20" y="336" width="280" height="122"/>
+                                <string key="text">With this App, you can view the Museum Collection, listen to students describe  objects they've studied, and use hashtags to tweet about your favorite obejects. (i.e. #fishplate @FordhamMuseum)</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.47058823529999999" green="0.0" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="Lbw-BI-v53" firstAttribute="top" secondItem="2gX-rq-CVi" secondAttribute="bottom" constant="45" id="65f-8y-rkf"/>
+                            <constraint firstAttribute="trailing" secondItem="2gX-rq-CVi" secondAttribute="trailing" constant="20" id="HfU-mU-o7I"/>
+                            <constraint firstItem="Lbw-BI-v53" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="LVY-VP-OZg"/>
+                            <constraint firstAttribute="trailing" secondItem="Lbw-BI-v53" secondAttribute="trailing" constant="20" id="Lx1-De-DtW"/>
+                            <constraint firstItem="2gX-rq-CVi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Vnk-P6-D3d"/>
+                            <constraint firstItem="2gX-rq-CVi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ly1-8X-M4A"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="661" y="-630"/>
+        </scene>
+        <!--Greek-->
+        <scene sceneID="ejV-zY-AoW">
+            <objects>
+                <viewController id="QoU-G1-LOt" customClass="CollectionViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8cW-y3-dvn"/>
+                        <viewControllerLayoutGuide type="bottom" id="xmr-7D-pUC"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kI7-HH-Ptw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Collection View Goes Here" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oQ6-co-rQH">
+                                <rect key="frame" x="58" y="273" width="204" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Greek" id="v5p-pv-IBY"/>
+                    <navigationItem key="navigationItem" id="OsT-ak-Imd"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cnz-LR-raK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="820" y="998"/>
+        </scene>
+        <!--Roman-->
+        <scene sceneID="Sss-ke-z1s">
+            <objects>
+                <viewController id="CeI-za-cPl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="pjz-Fh-Hqm"/>
+                        <viewControllerLayoutGuide type="bottom" id="NOq-sw-wWG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rxy-Yn-Skm">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Roman" id="DHs-2O-e4v"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXt-SJ-6IJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1252" y="998"/>
+        </scene>
+        <!--Etruscan-->
+        <scene sceneID="OMW-Dv-cgx">
+            <objects>
+                <viewController id="YDU-1x-Byl" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7cq-BH-CPb"/>
+                        <viewControllerLayoutGuide type="bottom" id="0jW-W0-85z"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="R3t-A9-waj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Etruscan" id="JIE-zz-hgj"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="onv-RU-Bz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1687" y="998"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Jbf-9k-Nx6">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9LX-aK-N7a" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dLT-Sq-tOV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="usG-E6-kFe" kind="relationship" relationship="rootViewController" id="FLh-IH-ncl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aSC-iD-HTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1244" y="-630"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="kcn-JU-rgw">
+            <objects>
+                <viewController id="f8Y-4d-9V5" customClass="DetailViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2eP-Jf-Zty"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jk1-eK-pBp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dYG-9f-Ia6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="P06-Ob-gxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1044" y="1661"/>
+        </scene>
+        <!--Twitter View Controller-->
+        <scene sceneID="3WO-qN-gmM">
+            <objects>
+                <viewController id="1al-vn-gJp" customClass="TwitterViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YLM-0s-qWC"/>
+                        <viewControllerLayoutGuide type="bottom" id="dmt-ZK-kkt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tWz-uL-wIh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lly-7B-cIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1481" y="1661"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="pRG-4x-rTB">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="usG-E6-kFe" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="k5K-P9-lLW"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="khM-Kr-AXj">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="QoU-G1-LOt" kind="relationship" relationship="viewControllers" id="tP7-tW-5hu"/>
+                        <segue destination="CeI-za-cPl" kind="relationship" relationship="viewControllers" id="9NY-SP-arO"/>
+                        <segue destination="YDU-1x-Byl" kind="relationship" relationship="viewControllers" id="EhV-gx-Wyj"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WUr-aF-4Ow" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1244" y="126"/>
         </scene>
     </scenes>
 </document>
