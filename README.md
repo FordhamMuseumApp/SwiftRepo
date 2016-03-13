@@ -9,26 +9,26 @@
 - [ ] Can we create the Tab View Controller programmatically so that we do not need to have 3 different view controllers for the greek, etruscan, and roman filters?
 
 **Design Features**
-- [ ] Fordham Maroon and Benjamin Moore Blueberry color scheme
-- [ ] Auto-layout used throughout
+- [ ] User sees Fordham Maroon and Benjamin Moore Blueberry color scheme
+- [ ] User sees Auto-layout used throughout
 
 **Launch**
-- [ ] Custom Launch Screen
-- [x] Home screen with welcome and use information
+- [ ] User sees Custom Launch Screen
+- [x] User sees Home screen with welcome and use information
 
 **CollectionView**
-- [ ] Collection View that is populated with museum artifacts and info.
-- [ ] Main View controller has a tab bar that allows you to select between greek, etruscan, and roman filters.
-- [ ] Main View controller has a search bar that filters artifacts
-- [ ] The collection View will implement infinite scrolling
-- [ ] Modal Search view controller that allows you to search through all artifacts
-- [ ] You can tap on each cell to access a detail view of the selected artifact.
+- [ ] User sees Collection View that is populated with museum artifacts and info.
+- [ ] User sees Main View controller has a tab bar that allows you to select between greek, etruscan, and roman filters.
+- [ ] User sees Main View controller has a search bar that can filter artifacts
+- [ ] User sees The collection View will implement infinite scrolling
+- [ ] User sees Modal Search view controller that allows you to search through all artifacts
+- [ ] User can tap on each cell to access a detail view of the selected artifact.
 
 **DetailView**
-- [ ] The Detail View includes the image, name, description and, for some artifacts, audio
-- [ ] record audio files
-- [ ] implement Fordham museum Twitter feed filtered by object hashtag
-- [ ] In the Detail View there is the option to access a Twitter with OAuth where you can give rating/user feedback on an artifact.
+- [ ] User sees the Detail View includes the image, name, description and, for some artifacts, audio
+- [ ] User can listen to recorded audio files
+- [ ] User sees Fordham museum Twitter feed filtered by object hashtag
+- [ ] User can access a Twitter with OAuth where you can give rating/user feedback on an artifact.
 
 **Twitter**
 - [x] Creation of FordhamMuseum Twitter feed to show live tweets, give ability to tweet at fordhammuseum and object hashtags
