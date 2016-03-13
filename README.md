@@ -33,7 +33,11 @@
 **Twitter**
 - [x] Creation of FordhamMuseum Twitter feed to show live tweets, give ability to tweet at fordhammuseum and object hashtags
 - [ ] Create hashtags for the objects
-      
+     
+## Wireframe
+
+<img src='http://i.imgur.com/xruVpZT.jpg' title='Wireframe' width='' alt='Wireframe' />
+ 
 ## License
       
           Copyright [2016] [Michael Gonzales, Michael Ceraso, Aaron Laub]

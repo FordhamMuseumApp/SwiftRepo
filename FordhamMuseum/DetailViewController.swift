@@ -10,6 +10,18 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+    @IBOutlet weak var detailImage: UIImageView!
+    @IBOutlet weak var detailName: UILabel!
+    @IBOutlet weak var regionDateLabel: UILabel!
+    @IBOutlet weak var materialHeightLabel: UILabel!
+    @IBOutlet weak var collectionCollectionNumberLabel: UILabel!
+    @IBOutlet weak var museumLabel: UILabel!
+    @IBOutlet weak var playButtonImage: UIImageView!
+    @IBOutlet weak var pauseButtonImage: UIImageView!
+    @IBOutlet weak var skipBackButtonImage: UIImageView!
+   
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
