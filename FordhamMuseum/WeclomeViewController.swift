@@ -10,11 +10,13 @@ import UIKit
 
 class WeclomeViewController: UIViewController {
 
+    @IBOutlet weak var arrow: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
         var upSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
         upSwipe.direction = .Up
         view.addGestureRecognizer(upSwipe)
+        arrow.alpha = 0
         
         
         
@@ -22,12 +24,32 @@ class WeclomeViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        let i = true
+        while i{
+            UIView.animateWithDuration(1.5, delay: 2.0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
+                self.arrow.alpha = 1.0
+                }, completion: { (Bool) -> Void in
+                    UIView.animateWithDuration(1.5, animations: {
+                        self.arrow.alpha = 0
+                        print("fadeout")
+                    })
+                })
+            
+            
+        }
+    }
+    
     func handleSwipes(sender:UISwipeGestureRecognizer) {
         if (sender.direction == .Up) {
             print("Swipe up")
             performSegueWithIdentifier("open", sender: sender)
         }
     }
+    
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

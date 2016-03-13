@@ -17,32 +17,64 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Fordham Museum of Greek, Roman, and Etruscan Art!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gX-rq-CVi">
-                                <rect key="frame" x="20" y="40" width="280" height="251"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Fordham Museum" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gX-rq-CVi">
+                                <rect key="frame" x="11" y="41" width="299" height="42"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbw-BI-v53">
-                                <rect key="frame" x="20" y="336" width="280" height="122"/>
-                                <string key="text">With this App, you can view the Museum Collection, listen to students describe  objects they've studied, and use hashtags to tweet about your favorite obejects. (i.e. #fishplate @FordhamMuseum)</string>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Swipe up to experience the exhibit" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbw-BI-v53">
+                                <rect key="frame" x="29" y="298" width="263" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Greek, Etruscan, and Roman Art" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cza-vr-OwX">
+                                <rect key="frame" x="38" y="112" width="245" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Des-Eh-lhL">
+                                <rect key="frame" x="152" y="83" width="16" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="S8I-te-vz7">
+                                <rect key="frame" x="108" y="158" width="104" height="105"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="104" id="Pe3-iP-9S6"/>
+                                    <constraint firstAttribute="height" constant="105" id="WvX-vI-L8I"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="arrow" translatesAutoresizingMaskIntoConstraints="NO" id="Fiv-Os-naI">
+                                <rect key="frame" x="103" y="327" width="115" height="149"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="ZM4-x9-ZIO"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.47058823529999999" green="0.0" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="Lbw-BI-v53" firstAttribute="top" secondItem="2gX-rq-CVi" secondAttribute="bottom" constant="45" id="65f-8y-rkf"/>
-                            <constraint firstAttribute="trailing" secondItem="2gX-rq-CVi" secondAttribute="trailing" constant="20" id="HfU-mU-o7I"/>
-                            <constraint firstItem="Lbw-BI-v53" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="LVY-VP-OZg"/>
-                            <constraint firstAttribute="trailing" secondItem="Lbw-BI-v53" secondAttribute="trailing" constant="20" id="Lx1-De-DtW"/>
-                            <constraint firstItem="2gX-rq-CVi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="Vnk-P6-D3d"/>
-                            <constraint firstItem="2gX-rq-CVi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="ly1-8X-M4A"/>
+                            <constraint firstItem="2gX-rq-CVi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="1Nd-QA-xRX"/>
+                            <constraint firstItem="S8I-te-vz7" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="108" id="31U-BC-tlq"/>
+                            <constraint firstItem="2gX-rq-CVi" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3OL-On-txN"/>
+                            <constraint firstItem="Lbw-BI-v53" firstAttribute="top" secondItem="S8I-te-vz7" secondAttribute="bottom" constant="35" id="5Ab-8i-u3y"/>
+                            <constraint firstAttribute="trailing" secondItem="S8I-te-vz7" secondAttribute="trailing" constant="108" id="Kq5-nK-2VY"/>
+                            <constraint firstItem="S8I-te-vz7" firstAttribute="top" secondItem="cza-vr-OwX" secondAttribute="bottom" constant="25" id="NvB-PY-ZLY"/>
+                            <constraint firstItem="cza-vr-OwX" firstAttribute="top" secondItem="Des-Eh-lhL" secondAttribute="bottom" constant="8" id="Pny-nV-1VT"/>
+                            <constraint firstAttribute="trailing" secondItem="2gX-rq-CVi" secondAttribute="trailing" constant="10" id="Po5-87-RDa"/>
+                            <constraint firstItem="Des-Eh-lhL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bGz-4W-JFD"/>
+                            <constraint firstItem="2gX-rq-CVi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="11" id="ctK-Wv-GiL"/>
+                            <constraint firstItem="Fiv-Os-naI" firstAttribute="top" secondItem="Lbw-BI-v53" secondAttribute="bottom" constant="8" id="rvP-R4-mHz"/>
+                            <constraint firstItem="Des-Eh-lhL" firstAttribute="top" secondItem="2gX-rq-CVi" secondAttribute="bottom" id="sIs-PL-dtt"/>
+                            <constraint firstItem="cza-vr-OwX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zPA-bD-XeB"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="arrow" destination="Fiv-Os-naI" id="lro-zb-uCL"/>
                         <segue destination="9LX-aK-N7a" kind="presentation" identifier="open" id="Vab-lK-fmv"/>
                     </connections>
                 </viewController>
@@ -197,4 +229,8 @@
             <point key="canvasLocation" x="1244" y="126"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="arrow" width="157" height="141"/>
+        <image name="head" width="160" height="161"/>
+    </resources>
 </document>
