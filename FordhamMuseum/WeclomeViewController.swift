@@ -12,10 +12,21 @@ class WeclomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        var upSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        upSwipe.direction = .Up
+        view.addGestureRecognizer(upSwipe)
+        
+        
         
         print("We linked the storyboard and xcode")
 
         // Do any additional setup after loading the view.
+    }
+    func handleSwipes(sender:UISwipeGestureRecognizer) {
+        if (sender.direction == .Up) {
+            print("Swipe up")
+            performSegueWithIdentifier("open", sender: sender)
+        }
     }
 
     override func didReceiveMemoryWarning() {
