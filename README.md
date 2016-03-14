@@ -33,7 +33,7 @@
 - [ ] User see Student Objects with transitions to audio files
 
 **TwitterView**
-- [x] Creation of FordhamMuseum Twitter feed to show live tweets, give ability to tweet at fordhammuseum and object hashtags
+- [x] Creation of @FordhamMuseum Twitter
 - [ ] User sees a live feed of @FordhamMuseum tweets. We will need endpoints to authenticate and authorize @FordhamMuseum and will need to get the user, @FordhamMuseum's, tweets to display
 
 ## Optional User Stories
