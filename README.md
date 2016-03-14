@@ -39,6 +39,15 @@
 ## Optional User Stories
 - [ ] Users of the App have the ability to login with their own twitter account and tweet @FordhamMuseum through the app
 
+## Video Walkthrough 
+
+Here's a walkthrough of implemented user stories:
+
+<img src='http://i.imgur.com/TGbQ0hU.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+
 ## Wireframe
 
 <img src='http://i.imgur.com/xruVpZT.jpg' title='Wireframe' width='' alt='Wireframe' />
