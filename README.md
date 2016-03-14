@@ -25,7 +25,6 @@
 
 **DetailView**
 - [ ] User sees the Detail View includes the image, name, description and, for some artifacts, audio
-- [ ] User can listen to recorded audio files when available
 
 **SearchView**
 - [ ] User sees Modal Search view controller that allows for search through all artifacts
