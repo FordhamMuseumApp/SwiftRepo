@@ -21,7 +21,7 @@
 - [ ] User sees naviagation bar buttons that allow for access to search, twitter feed, and student audio tour
 - [ ] User is able to scroll infinitely through objects
 - [ ] User can tap on each cell to access a detail view of the selected artifact.
-**Note.** There is a preexisting API with these data available. Our team is coordinating with Fordham University and Library staff to see what the best way forward will be for our app to get access to the data. Do we create a Parse? Do we get IP Authentication? These issues are being worked out.
+- **Note.** There is a preexisting API with these data available. Our team is coordinating with Fordham University and Library staff to see what the best way forward will be for our app to get access to the data. Do we create a Parse? Do we get IP Authentication? These issues are being worked out.
 
 **DetailView**
 - [ ] User sees the Detail View includes the image, name, description and, for some artifacts, audio
