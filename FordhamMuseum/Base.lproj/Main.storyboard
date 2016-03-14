@@ -340,13 +340,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow" width="157" height="141"/>
-        <image name="head" width="160" height="161"/>
         <image name="Archeology-100" width="100" height="100"/>
         <image name="Library-100" width="100" height="100"/>
         <image name="Lyre-100" width="100" height="100"/>
         <image name="Pause-100" width="100" height="100"/>
         <image name="Play-100" width="100" height="100"/>
         <image name="Skip to Start-100" width="100" height="100"/>
+        <image name="arrow" width="157" height="141"/>
+        <image name="head" width="160" height="161"/>
     </resources>
 </document>
