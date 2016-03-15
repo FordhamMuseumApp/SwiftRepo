@@ -113,6 +113,7 @@
 				TargetAttributes = {
 					686C8DD71C86837B006DC5D1 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = FFN22Q7TH6;
 					};
 				};
 			};
@@ -269,10 +270,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FordhamMuseum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.FordhamMuseum;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FordhamMuseum;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -280,10 +284,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = FordhamMuseum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.FordhamMuseum;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = FordhamMuseum;
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

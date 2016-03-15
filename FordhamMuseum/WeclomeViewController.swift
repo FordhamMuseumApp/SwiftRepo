@@ -13,7 +13,7 @@ class WeclomeViewController: UIViewController {
     @IBOutlet weak var arrow: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        var upSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
+        let upSwipe = UISwipeGestureRecognizer(target: self, action: Selector("handleSwipes:"))
         upSwipe.direction = .Up
         view.addGestureRecognizer(upSwipe)
       //  arrow.alpha = 0
@@ -27,7 +27,7 @@ class WeclomeViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        let i = true
+        /* let i = true
         /*while i{
             UIView.animateWithDuration(1.5, delay: 2.0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
                 self.arrow.alpha = 1.0

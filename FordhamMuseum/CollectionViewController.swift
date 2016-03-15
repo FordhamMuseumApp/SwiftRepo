@@ -10,6 +10,10 @@ import UIKit
 
 class CollectionViewController: UIViewController {
 
+    @IBOutlet weak var searchButton: UIBarButtonItem!
+    @IBOutlet weak var twitterButton: UIBarButtonItem!
+    @IBOutlet weak var audioButton: UIBarButtonItem!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
