@@ -11,6 +11,7 @@
 		686C8DE11C86837B006DC5D1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C8DDF1C86837B006DC5D1 /* Main.storyboard */; };
 		686C8DE31C86837B006DC5D1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 686C8DE21C86837B006DC5D1 /* Assets.xcassets */; };
 		686C8DE61C86837B006DC5D1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 686C8DE41C86837B006DC5D1 /* LaunchScreen.storyboard */; };
+		88BA12FC02422BC86FF9CAB1 /* Pods_FordhamMuseum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC63D4749974A63AAF53E24 /* Pods_FordhamMuseum.framework */; };
 		F9AB21EB1C91FB6B00056BF4 /* WeclomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB21EA1C91FB6B00056BF4 /* WeclomeViewController.swift */; };
 		F9AB21F01C9202B300056BF4 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB21EF1C9202B300056BF4 /* CollectionViewController.swift */; };
 		F9AB21F21C92038900056BF4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB21F11C92038900056BF4 /* DetailViewController.swift */; };
@@ -18,12 +19,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		088D85548D199A6141621506 /* Pods-FordhamMuseum.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FordhamMuseum.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FordhamMuseum/Pods-FordhamMuseum.debug.xcconfig"; sourceTree = "<group>"; };
 		686C8DD81C86837B006DC5D1 /* FordhamMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FordhamMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		686C8DDB1C86837B006DC5D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		686C8DE01C86837B006DC5D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		686C8DE21C86837B006DC5D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		686C8DE51C86837B006DC5D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		686C8DE71C86837C006DC5D1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9BC63D4749974A63AAF53E24 /* Pods_FordhamMuseum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FordhamMuseum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B30249BB15369324A596D2EC /* Pods-FordhamMuseum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FordhamMuseum.release.xcconfig"; path = "Pods/Target Support Files/Pods-FordhamMuseum/Pods-FordhamMuseum.release.xcconfig"; sourceTree = "<group>"; };
 		F9AB21EA1C91FB6B00056BF4 /* WeclomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeclomeViewController.swift; sourceTree = "<group>"; };
 		F9AB21EF1C9202B300056BF4 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		F9AB21F11C92038900056BF4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
@@ -35,17 +39,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88BA12FC02422BC86FF9CAB1 /* Pods_FordhamMuseum.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B234138E4B2448ECA112397 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				088D85548D199A6141621506 /* Pods-FordhamMuseum.debug.xcconfig */,
+				B30249BB15369324A596D2EC /* Pods-FordhamMuseum.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		686C8DCF1C86837B006DC5D1 = {
 			isa = PBXGroup;
 			children = (
 				686C8DDA1C86837B006DC5D1 /* FordhamMuseum */,
 				686C8DD91C86837B006DC5D1 /* Products */,
+				5B234138E4B2448ECA112397 /* Pods */,
+				86487A8812CB713EBD2FD92D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +86,14 @@
 			path = FordhamMuseum;
 			sourceTree = "<group>";
 		};
+		86487A8812CB713EBD2FD92D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9BC63D4749974A63AAF53E24 /* Pods_FordhamMuseum.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F9AB21EE1C91FDAE00056BF4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,9 +112,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 686C8DEA1C86837C006DC5D1 /* Build configuration list for PBXNativeTarget "FordhamMuseum" */;
 			buildPhases = (
+				3F335E849E318F0C26C15314 /* Check Pods Manifest.lock */,
 				686C8DD41C86837B006DC5D1 /* Sources */,
 				686C8DD51C86837B006DC5D1 /* Frameworks */,
 				686C8DD61C86837B006DC5D1 /* Resources */,
+				D65A5F81E0A0A25C9F592DA3 /* Embed Pods Frameworks */,
+				0545AA1496BC6C6C6A659348 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,6 +174,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0545AA1496BC6C6C6A659348 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FordhamMuseum/Pods-FordhamMuseum-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3F335E849E318F0C26C15314 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D65A5F81E0A0A25C9F592DA3 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FordhamMuseum/Pods-FordhamMuseum-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		686C8DD41C86837B006DC5D1 /* Sources */ = {
@@ -268,6 +343,7 @@
 		};
 		686C8DEB1C86837C006DC5D1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 088D85548D199A6141621506 /* Pods-FordhamMuseum.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -282,6 +358,7 @@
 		};
 		686C8DEC1C86837C006DC5D1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B30249BB15369324A596D2EC /* Pods-FordhamMuseum.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
