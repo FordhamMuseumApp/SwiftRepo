@@ -2,38 +2,52 @@
 
 **The Fordham Museum App** is an app to assist with the navigation and experience of the Fordham University Museum of Greek, Etruscan, and Roman Art.
 
-## User Stories
-
 **Design Questions**
-- [ ] Where do we put the twitter login? How do we let people tweet about their favorite objects? Do we give access to camera?
 - [ ] Can we create the Tab View Controller programmatically so that we do not need to have 3 different view controllers for the greek, etruscan, and roman filters?
 
 **Design Features**
 - [ ] User sees Fordham Maroon and Benjamin Moore Blueberry color scheme
 - [ ] User sees Auto-layout used throughout
 
+## Required User Stories
+
 **Launch**
 - [ ] User sees Custom Launch Screen
-- [x] User sees Home screen with welcome and use information
+- [x] User sees Home screen
 
 **CollectionView**
 - [ ] User sees Collection View that is populated with museum artifacts and info.
-- [ ] User sees Main View controller has a tab bar that allows you to select between greek, etruscan, and roman filters.
-- [ ] User sees Main View controller has a search bar that can filter artifacts
-- [ ] User sees The collection View will implement infinite scrolling
-- [ ] User sees Modal Search view controller that allows you to search through all artifacts
+- [x] User sees a tab bar that allows for selection between greek, etruscan, and roman filters.
+- [ ] User sees naviagation bar buttons that allow for access to search, twitter feed, and student audio tour
+- [ ] User is able to scroll infinitely through objects
 - [ ] User can tap on each cell to access a detail view of the selected artifact.
+- **Note.** There is a preexisting API with these data available. Our team is coordinating with Fordham University and Library staff to see what the best way forward will be for our app to get access to the data. Do we create a Parse? Do we get IP Authentication? These issues are being worked out.
 
 **DetailView**
 - [ ] User sees the Detail View includes the image, name, description and, for some artifacts, audio
-- [ ] User can listen to recorded audio files
-- [ ] User sees Fordham museum Twitter feed filtered by object hashtag
-- [ ] User can access a Twitter with OAuth where you can give rating/user feedback on an artifact.
 
-**Twitter**
-- [x] Creation of FordhamMuseum Twitter feed to show live tweets, give ability to tweet at fordhammuseum and object hashtags
-- [ ] Create hashtags for the objects
-     
+**SearchView**
+- [ ] User sees Modal Search view controller that allows for search through all artifacts
+
+**AudioView**
+- [ ] User see Student Objects with transitions to audio files
+
+**TwitterView**
+- [x] Creation of @FordhamMuseum Twitter
+- [ ] User sees a live feed of @FordhamMuseum tweets. We will need endpoints to authenticate and authorize @FordhamMuseum and will need to get the user, @FordhamMuseum's, tweets to display
+
+## Optional User Stories
+- [ ] Users of the App have the ability to login with their own twitter account and tweet @FordhamMuseum through the app
+
+## Video Walkthrough 
+
+Here's a walkthrough of implemented user stories:
+
+<img src='http://i.imgur.com/TGbQ0hU.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+
 ## Wireframe
 
 <img src='http://i.imgur.com/xruVpZT.jpg' title='Wireframe' width='' alt='Wireframe' />
