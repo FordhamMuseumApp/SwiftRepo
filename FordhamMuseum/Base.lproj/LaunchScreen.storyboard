@@ -14,24 +14,54 @@
                         <viewControllerLayoutGuide type="bottom" id="xb3-aO-Qok"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to the Fordham Museum of Greek, Roman, and Etruscan Art!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yfv-N1-rBf">
-                                <rect key="frame" x="20" y="40" width="280" height="251"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="35"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fordham Museum" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQ1-aR-jfa">
+                                <rect key="frame" x="19" y="41" width="282" height="40"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greek, Etruscan, and Roman Art" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oTE-iN-AqW">
+                                <rect key="frame" x="38" y="107" width="245" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="of" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kWR-Rr-kgc">
+                                <rect key="frame" x="152" y="83" width="16" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="Ksy-xq-mPe">
+                                <rect key="frame" x="142" y="221" width="37" height="37"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.47058823529411764" green="0.0" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="yfv-N1-rBf" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="20" id="9iq-Tk-2N4"/>
-                            <constraint firstItem="yfv-N1-rBf" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="20" id="A1l-sa-O7c"/>
-                            <constraint firstAttribute="trailing" secondItem="yfv-N1-rBf" secondAttribute="trailing" constant="20" id="bK8-Ly-xaC"/>
+                            <constraint firstAttribute="trailing" secondItem="oTE-iN-AqW" secondAttribute="trailing" constant="37" id="0Ze-20-26Q"/>
+                            <constraint firstItem="kWR-Rr-kgc" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="152" id="12q-LR-LbT"/>
+                            <constraint firstAttribute="trailing" secondItem="kWR-Rr-kgc" secondAttribute="trailing" constant="152" id="40j-Hy-GDK"/>
+                            <constraint firstItem="wQ1-aR-jfa" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="19" id="6nx-qn-lnq"/>
+                            <constraint firstItem="oTE-iN-AqW" firstAttribute="top" secondItem="kWR-Rr-kgc" secondAttribute="bottom" constant="3" id="AEw-4t-HSc"/>
+                            <constraint firstItem="kWR-Rr-kgc" firstAttribute="top" secondItem="wQ1-aR-jfa" secondAttribute="bottom" constant="2" id="B7V-Po-ngd"/>
+                            <constraint firstItem="wQ1-aR-jfa" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="21" id="FLG-wf-SgL"/>
+                            <constraint firstItem="oTE-iN-AqW" firstAttribute="top" secondItem="kWR-Rr-kgc" secondAttribute="bottom" constant="3" id="Kkc-fY-Psm"/>
+                            <constraint firstItem="oTE-iN-AqW" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="38" id="SFi-mc-33f"/>
+                            <constraint firstAttribute="trailing" secondItem="wQ1-aR-jfa" secondAttribute="trailing" constant="19" id="VdF-30-dgu"/>
+                            <constraint firstItem="kWR-Rr-kgc" firstAttribute="top" secondItem="wQ1-aR-jfa" secondAttribute="bottom" constant="2" id="Yy3-bR-V8w"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="AEw-4t-HSc"/>
+                                <exclude reference="B7V-Po-ngd"/>
+                            </mask>
+                        </variation>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
