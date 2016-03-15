@@ -9,19 +9,25 @@
         <!--Weclome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WeclomeViewController" customModule="Ram_sMuseum" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WeclomeViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fordham Museum" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2gX-rq-CVi">
                                 <rect key="frame" x="19" y="41" width="282" height="40"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to experience the exhibit!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbw-BI-v53">
+                                <rect key="frame" x="26" y="393" width="268" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greek, Etruscan, and Roman Art" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cza-vr-OwX">
@@ -36,15 +42,8 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="S8I-te-vz7">
-                                <rect key="frame" x="60" y="184" width="200" height="200"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="0NI-Ul-yyD"/>
-                                    <constraint firstAttribute="height" constant="200" id="srJ-qG-MXa"/>
-                                </constraints>
-                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Collapse Arrow-96" translatesAutoresizingMaskIntoConstraints="NO" id="Fiv-Os-naI">
-                                <rect key="frame" x="135" y="510" width="50" height="50"/>
+                                <rect key="frame" x="135" y="422" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="S8N-ws-lWK"/>
                                     <constraint firstAttribute="width" constant="50" id="Yj7-jI-mBF"/>
@@ -56,18 +55,19 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe up to experience the exhibit!" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lbw-BI-v53">
-                                <rect key="frame" x="26" y="481" width="268" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head" translatesAutoresizingMaskIntoConstraints="NO" id="S8I-te-vz7">
+                                <rect key="frame" x="60" y="140" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="0NI-Ul-yyD"/>
+                                    <constraint firstAttribute="height" constant="200" id="srJ-qG-MXa"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.47058823529999999" green="0.0" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2gX-rq-CVi" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="21" id="1sN-d5-Rok"/>
                             <constraint firstAttribute="trailing" secondItem="cza-vr-OwX" secondAttribute="trailing" constant="37" id="2Au-A2-dou"/>
-                            <constraint firstItem="S8I-te-vz7" firstAttribute="top" secondItem="cza-vr-OwX" secondAttribute="bottom" constant="56" id="7LS-76-32k"/>
+                            <constraint firstItem="S8I-te-vz7" firstAttribute="top" secondItem="cza-vr-OwX" secondAttribute="bottom" constant="12" id="7LS-76-32k"/>
                             <constraint firstItem="Des-Eh-lhL" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="152" id="7Zu-uc-2pU"/>
                             <constraint firstItem="Fiv-Os-naI" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="135" id="D9f-Gr-79q"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Lbw-BI-v53" secondAttribute="bottom" constant="66" id="F9I-cX-CiY"/>
@@ -85,7 +85,7 @@
                             <constraint firstAttribute="trailing" secondItem="Des-Eh-lhL" secondAttribute="trailing" constant="152" id="zhX-v7-dvd"/>
                         </constraints>
                     </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="arrow" destination="Fiv-Os-naI" id="lro-zb-uCL"/>
                         <segue destination="9LX-aK-N7a" kind="presentation" identifier="open" id="Vab-lK-fmv"/>
@@ -98,35 +98,29 @@
         <!--Greek-->
         <scene sceneID="ejV-zY-AoW">
             <objects>
-                <viewController id="QoU-G1-LOt" customClass="CollectionViewController" customModule="Ram_sMuseum" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="QoU-G1-LOt" customClass="CollectionViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8cW-y3-dvn"/>
                         <viewControllerLayoutGuide type="bottom" id="xmr-7D-pUC"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kI7-HH-Ptw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Greek Objects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CH7-MO-ngE">
-                                <rect key="frame" x="105" y="273" width="110" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Greek Objects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnG-0K-Dld">
+                                <rect key="frame" x="105" y="229" width="110" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1058823529" green="0.2901960784" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="xmr-7D-pUC" firstAttribute="top" secondItem="CH7-MO-ngE" secondAttribute="bottom" constant="225" id="Dxw-4S-MVU"/>
-                            <constraint firstItem="CH7-MO-ngE" firstAttribute="leading" secondItem="kI7-HH-Ptw" secondAttribute="leading" constant="105" id="MEL-aO-2Dp"/>
-                            <constraint firstItem="CH7-MO-ngE" firstAttribute="top" secondItem="8cW-y3-dvn" secondAttribute="bottom" constant="209" id="eB3-lc-KoN"/>
-                            <constraint firstAttribute="trailing" secondItem="CH7-MO-ngE" secondAttribute="trailing" constant="105" id="edT-Fd-xT8"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Greek" image="Library-100" id="v5p-pv-IBY">
                         <inset key="imageInsets" minX="34" minY="35" maxX="34" maxY="31"/>
                     </tabBarItem>
                     <navigationItem key="navigationItem" id="OsT-ak-Imd"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cnz-LR-raK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -141,28 +135,22 @@
                         <viewControllerLayoutGuide type="bottom" id="NOq-sw-wWG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="rxy-Yn-Skm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Etruscan Objects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Swa-vX-SKD">
-                                <rect key="frame" x="94" y="273" width="132" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Etruscan Objects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIZ-3N-oJC">
+                                <rect key="frame" x="94" y="229" width="132" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.10588235294117647" green="0.29019607843137257" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="Swa-vX-SKD" secondAttribute="trailing" constant="94" id="6wK-X0-ldS"/>
-                            <constraint firstItem="Swa-vX-SKD" firstAttribute="top" secondItem="pjz-Fh-Hqm" secondAttribute="bottom" constant="209" id="bnm-tf-lB9"/>
-                            <constraint firstItem="Swa-vX-SKD" firstAttribute="leading" secondItem="rxy-Yn-Skm" secondAttribute="leading" constant="94" id="cY4-3J-z1e"/>
-                            <constraint firstItem="NOq-sw-wWG" firstAttribute="top" secondItem="Swa-vX-SKD" secondAttribute="bottom" constant="225" id="cmi-cG-lp5"/>
-                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Etruscan" image="Archeology-100" id="DHs-2O-e4v">
                         <inset key="imageInsets" minX="34" minY="35" maxX="34" maxY="31"/>
                     </tabBarItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nXt-SJ-6IJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -177,17 +165,11 @@
                         <viewControllerLayoutGuide type="bottom" id="0jW-W0-85z"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="R3t-A9-waj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roman Objects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcP-nr-gak">
-                                <rect key="frame" x="102" y="273" width="117" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RH5-Fl-iez">
-                                <rect key="frame" x="91" y="481" width="139" height="30"/>
+                                <rect key="frame" x="91" y="393" width="139" height="30"/>
                                 <state key="normal" title="Example Detail View">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -228,11 +210,17 @@
                                     <segue destination="q3M-0p-bxM" kind="push" id="HU7-e8-h43"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roman Objects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcP-nr-gak">
+                                <rect key="frame" x="102" y="229" width="117" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1058823529" green="0.2901960784" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VcP-nr-gak" secondAttribute="trailing" constant="101" id="4Lz-f8-jna"/>
-                            <constraint firstItem="RH5-Fl-iez" firstAttribute="top" secondItem="VcP-nr-gak" secondAttribute="bottom" constant="187" id="6Os-aR-iS3"/>
+                            <constraint firstItem="RH5-Fl-iez" firstAttribute="top" secondItem="VcP-nr-gak" secondAttribute="bottom" constant="143" id="6Os-aR-iS3"/>
                             <constraint firstItem="YyK-QY-NUf" firstAttribute="leading" secondItem="R3t-A9-waj" secondAttribute="leading" constant="100" id="Opp-0e-eTx"/>
                             <constraint firstItem="TkL-Sy-VVt" firstAttribute="top" secondItem="7cq-BH-CPb" secondAttribute="bottom" constant="8" id="SU6-8z-pCz"/>
                             <constraint firstAttribute="trailing" secondItem="RH5-Fl-iez" secondAttribute="trailing" constant="90" id="Tvu-KE-7gk"/>
@@ -246,10 +234,10 @@
                             <constraint firstItem="xJD-tb-BFJ" firstAttribute="top" secondItem="7cq-BH-CPb" secondAttribute="bottom" constant="8" id="rmT-wc-ZVU"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Roman" image="Lyre-100" id="JIE-zz-hgj">
+                    <tabBarItem key="tabBarItem" title="Roman" image="Colosseum-100" id="JIE-zz-hgj">
                         <inset key="imageInsets" minX="34" minY="35" maxX="34" maxY="31"/>
                     </tabBarItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onv-RU-Bz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -264,17 +252,17 @@
                         <viewControllerLayoutGuide type="bottom" id="zEH-jO-EGz"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8EY-yh-yeL">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Segues to detailViews with Audio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8h-Bx-jv8">
-                                <rect key="frame" x="34" y="490" width="253" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W8h-Bx-jv8">
+                                <rect key="frame" x="287" y="490" width="0.0" height="0.0"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student Objects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUL-IA-M7g">
-                                <rect key="frame" x="98" y="273" width="125" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Student Objects with Audio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tUL-IA-M7g">
+                                <rect key="frame" x="56" y="229" width="209" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -283,7 +271,7 @@
                         <color key="backgroundColor" red="0.1058823529" green="0.2901960784" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="l7W-0i-5g0"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iby-bH-OU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -298,11 +286,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Eak-kj-pkP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tR6-p9-JB6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search Function" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyB-VG-ghE">
-                                <rect key="frame" x="98" y="273" width="125" height="21"/>
+                                <rect key="frame" x="98" y="229" width="125" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -311,7 +299,7 @@
                         <color key="backgroundColor" red="0.1058823529" green="0.2901960784" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" id="M5B-k5-peq"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nc6-aW-Cbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -322,7 +310,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9LX-aK-N7a" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="dLT-Sq-tOV">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -339,13 +327,13 @@
         <!--Detail View Controller-->
         <scene sceneID="kcn-JU-rgw">
             <objects>
-                <viewController id="f8Y-4d-9V5" customClass="DetailViewController" customModule="Ram_sMuseum" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="f8Y-4d-9V5" customClass="DetailViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="2eP-Jf-Zty"/>
                         <viewControllerLayoutGuide type="bottom" id="Jk1-eK-pBp"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="dYG-9f-Ia6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhe-jX-0wz">
@@ -466,7 +454,7 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" id="82D-ii-Whq"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="collectionCollectionNumberLabel" destination="rW7-rg-tkr" id="745-sN-Vij"/>
                         <outlet property="detailImage" destination="7fV-zG-SFn" id="Sz7-Ox-0VV"/>
@@ -486,32 +474,26 @@
         <!--Twitter View Controller-->
         <scene sceneID="3WO-qN-gmM">
             <objects>
-                <viewController id="1al-vn-gJp" customClass="TwitterViewController" customModule="Ram_sMuseum" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="1al-vn-gJp" customClass="TwitterViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YLM-0s-qWC"/>
                         <viewControllerLayoutGuide type="bottom" id="dmt-ZK-kkt"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tWz-uL-wIh">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@FordhamMuseum Twitter Feed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5lO-Wg-ZI4">
-                                <rect key="frame" x="20" y="273" width="280" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@FordhamMuseum Twitter Feed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AZ-9l-Elb">
+                                <rect key="frame" x="36" y="229" width="249" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="0.1058823529" green="0.2901960784" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="dmt-ZK-kkt" firstAttribute="top" secondItem="5lO-Wg-ZI4" secondAttribute="bottom" constant="225" id="O9V-J6-zBB"/>
-                            <constraint firstItem="5lO-Wg-ZI4" firstAttribute="top" secondItem="YLM-0s-qWC" secondAttribute="bottom" constant="209" id="odo-Fw-hZH"/>
-                            <constraint firstItem="5lO-Wg-ZI4" firstAttribute="leading" secondItem="tWz-uL-wIh" secondAttribute="leading" constant="20" id="t8R-ow-o7o"/>
-                            <constraint firstAttribute="trailing" secondItem="5lO-Wg-ZI4" secondAttribute="trailing" constant="20" id="w2j-Vn-xOE"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="upe-oO-QXA"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lly-7B-cIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -523,6 +505,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="usG-E6-kFe" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="k5K-P9-lLW"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="khM-Kr-AXj">
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -541,9 +524,9 @@
     <resources>
         <image name="Archeology-100" width="100" height="100"/>
         <image name="Collapse Arrow-96" width="96" height="96"/>
+        <image name="Colosseum-100" width="100" height="100"/>
         <image name="High Volume-100" width="100" height="100"/>
         <image name="Library-100" width="100" height="100"/>
-        <image name="Lyre-100" width="100" height="100"/>
         <image name="Pause-100" width="100" height="100"/>
         <image name="Play-100" width="100" height="100"/>
         <image name="Search-104" width="104" height="104"/>
