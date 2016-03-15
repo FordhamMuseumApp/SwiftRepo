@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		686C8DD81C86837B006DC5D1 /* Ram'sMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Ram'sMuseum.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		686C8DD81C86837B006DC5D1 /* FordhamMuseum.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FordhamMuseum.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		686C8DDB1C86837B006DC5D1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		686C8DE01C86837B006DC5D1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		686C8DE21C86837B006DC5D1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		686C8DD91C86837B006DC5D1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				686C8DD81C86837B006DC5D1 /* Ram'sMuseum.app */,
+				686C8DD81C86837B006DC5D1 /* FordhamMuseum.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -98,7 +98,7 @@
 			);
 			name = FordhamMuseum;
 			productName = FordhamMuseum;
-			productReference = 686C8DD81C86837B006DC5D1 /* Ram'sMuseum.app */;
+			productReference = 686C8DD81C86837B006DC5D1 /* FordhamMuseum.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -275,7 +275,7 @@
 				INFOPLIST_FILE = FordhamMuseum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.FordhamMuseum;
-				PRODUCT_NAME = "Ram'sMuseum";
+				PRODUCT_NAME = FordhamMuseum;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -289,7 +289,7 @@
 				INFOPLIST_FILE = FordhamMuseum/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.app.FordhamMuseum;
-				PRODUCT_NAME = "Ram'sMuseum";
+				PRODUCT_NAME = FordhamMuseum;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
