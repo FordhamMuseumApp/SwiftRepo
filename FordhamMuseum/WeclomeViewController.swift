@@ -27,7 +27,7 @@ class WeclomeViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        /* let i = true
+        let i = true
         /*while i{
             UIView.animateWithDuration(1.5, delay: 2.0, options: UIViewAnimationOptions.CurveLinear, animations: { () -> Void in
                 self.arrow.alpha = 1.0
