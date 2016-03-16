@@ -41,13 +41,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let MosaicsViewController = MosaicsNavigationController.topViewController as! CollectionViewController
         // GreekViewController.endpoint = "now_playing"
         MosaicsNavigationController.tabBarItem.title = "Mosaics"
-        MosaicsNavigationController.tabBarItem.image = UIImage(named: "Library-100")
+        MosaicsNavigationController.tabBarItem.image = UIImage(named: "Activity Grid Filled-100")
         
         let MiscNavigationController = storyboard.instantiateViewControllerWithIdentifier("CollectionNavigationController") as! UINavigationController
         let MiscViewController = MiscNavigationController.topViewController as! CollectionViewController
         // GreekViewController.endpoint = "now_playing"
-        MiscNavigationController.tabBarItem.title = "Misc"
-        MiscNavigationController.tabBarItem.image = UIImage(named: "Library-100")
+        MiscNavigationController.tabBarItem.title = "Also"
+        MiscNavigationController.tabBarItem.image = UIImage(named: "Bust-100")
         
         
         let tabBarController = UITabBarController()
