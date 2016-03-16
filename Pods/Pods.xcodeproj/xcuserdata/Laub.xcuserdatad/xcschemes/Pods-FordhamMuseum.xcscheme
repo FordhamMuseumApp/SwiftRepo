@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "686C8DD71C86837B006DC5D1"
-               BuildableName = "FordhamMuseum.app"
-               BlueprintName = "FordhamMuseum"
-               ReferencedContainer = "container:FordhamMuseum.xcodeproj">
+               BlueprintIdentifier = "C77E4E130CE3B6C45A1FBCA981EE5BBD"
+               BuildableName = "Pods_FordhamMuseum.framework"
+               BlueprintName = "Pods-FordhamMuseum"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -29,15 +29,6 @@
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "686C8DD71C86837B006DC5D1"
-            BuildableName = "FordhamMuseum.app"
-            BlueprintName = "FordhamMuseum"
-            ReferencedContainer = "container:FordhamMuseum.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -51,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "686C8DD71C86837B006DC5D1"
-            BuildableName = "FordhamMuseum.app"
-            BlueprintName = "FordhamMuseum"
-            ReferencedContainer = "container:FordhamMuseum.xcodeproj">
+            BlueprintIdentifier = "C77E4E130CE3B6C45A1FBCA981EE5BBD"
+            BuildableName = "Pods_FordhamMuseum.framework"
+            BlueprintName = "Pods-FordhamMuseum"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -70,16 +60,15 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "686C8DD71C86837B006DC5D1"
-            BuildableName = "FordhamMuseum.app"
-            BlueprintName = "FordhamMuseum"
-            ReferencedContainer = "container:FordhamMuseum.xcodeproj">
+            BlueprintIdentifier = "C77E4E130CE3B6C45A1FBCA981EE5BBD"
+            BuildableName = "Pods_FordhamMuseum.framework"
+            BlueprintName = "Pods-FordhamMuseum"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
