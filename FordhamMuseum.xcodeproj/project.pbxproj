@@ -97,9 +97,9 @@
 		F9AB21EE1C91FDAE00056BF4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				F9AB21F31C92039700056BF4 /* TwitterViewController.swift */,
 				F9AB21EF1C9202B300056BF4 /* CollectionViewController.swift */,
 				F9AB21F11C92038900056BF4 /* DetailViewController.swift */,
+				F9AB21F31C92039700056BF4 /* TwitterViewController.swift */,
 				F9AB21EA1C91FB6B00056BF4 /* WeclomeViewController.swift */,
 			);
 			name = ViewControllers;

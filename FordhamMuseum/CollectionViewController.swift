@@ -7,6 +7,7 @@
 //
 
 import UIKit
+var window: UIWindow?
 
 class CollectionViewController: UIViewController {
 
@@ -16,7 +17,7 @@ class CollectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
     }
 
