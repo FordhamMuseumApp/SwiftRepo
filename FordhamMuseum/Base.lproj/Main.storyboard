@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Weclome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WeclomeViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WeclomeViewController" id="BYZ-38-t0r" customClass="WeclomeViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -88,78 +88,17 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="arrow" destination="Fiv-Os-naI" id="lro-zb-uCL"/>
-                        <segue destination="9LX-aK-N7a" kind="presentation" identifier="open" id="Vab-lK-fmv"/>
+                        <segue destination="Hjy-xs-XKF" kind="modal" identifier="open" id="dge-9E-4nq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="820" y="-630"/>
+            <point key="canvasLocation" x="652" y="-521"/>
         </scene>
-        <!--Greek-->
-        <scene sceneID="ejV-zY-AoW">
-            <objects>
-                <viewController id="QoU-G1-LOt" customClass="CollectionViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="8cW-y3-dvn"/>
-                        <viewControllerLayoutGuide type="bottom" id="xmr-7D-pUC"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="kI7-HH-Ptw">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Greek Objects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SnG-0K-Dld">
-                                <rect key="frame" x="105" y="229" width="110" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.1058823529" green="0.2901960784" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Greek" image="Library-100" id="v5p-pv-IBY">
-                        <inset key="imageInsets" minX="34" minY="35" maxX="34" maxY="31"/>
-                    </tabBarItem>
-                    <navigationItem key="navigationItem" id="OsT-ak-Imd"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cnz-LR-raK" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="820" y="998"/>
-        </scene>
-        <!--Etruscan-->
-        <scene sceneID="Sss-ke-z1s">
-            <objects>
-                <viewController id="CeI-za-cPl" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="pjz-Fh-Hqm"/>
-                        <viewControllerLayoutGuide type="bottom" id="NOq-sw-wWG"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rxy-Yn-Skm">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Etruscan Objects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wIZ-3N-oJC">
-                                <rect key="frame" x="94" y="229" width="132" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.10588235294117647" green="0.29019607843137257" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Etruscan" image="Archeology-100" id="DHs-2O-e4v">
-                        <inset key="imageInsets" minX="34" minY="35" maxX="34" maxY="31"/>
-                    </tabBarItem>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nXt-SJ-6IJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1252" y="1006"/>
-        </scene>
-        <!--Roman-->
+        <!--Collection View Controller-->
         <scene sceneID="OMW-Dv-cgx">
             <objects>
-                <viewController id="YDU-1x-Byl" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="CollectionViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="YDU-1x-Byl" customClass="CollectionViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="7cq-BH-CPb"/>
                         <viewControllerLayoutGuide type="bottom" id="0jW-W0-85z"/>
@@ -168,7 +107,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RH5-Fl-iez">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RH5-Fl-iez">
                                 <rect key="frame" x="91" y="393" width="139" height="30"/>
                                 <state key="normal" title="Example Detail View">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -210,7 +149,7 @@
                                     <segue destination="q3M-0p-bxM" kind="push" id="HU7-e8-h43"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Roman Objects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcP-nr-gak">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Roman Objects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcP-nr-gak">
                                 <rect key="frame" x="102" y="229" width="117" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -234,14 +173,12 @@
                             <constraint firstItem="xJD-tb-BFJ" firstAttribute="top" secondItem="7cq-BH-CPb" secondAttribute="bottom" constant="8" id="rmT-wc-ZVU"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Roman" image="Colosseum-100" id="JIE-zz-hgj">
-                        <inset key="imageInsets" minX="34" minY="35" maxX="34" maxY="31"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="EKq-ZM-1NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onv-RU-Bz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1647" y="998"/>
+            <point key="canvasLocation" x="1203" y="134"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="NeL-Ih-F6j">
@@ -275,7 +212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iby-bH-OU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2180" y="1765"/>
+            <point key="canvasLocation" x="2200" y="837"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="jNB-ak-ccH">
@@ -303,26 +240,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nc6-aW-Cbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1471" y="1765"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Jbf-9k-Nx6">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9LX-aK-N7a" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dLT-Sq-tOV">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="usG-E6-kFe" kind="relationship" relationship="rootViewController" id="FLh-IH-ncl"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="aSC-iD-HTy" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1252" y="-630"/>
+            <point key="canvasLocation" x="963" y="945"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="kcn-JU-rgw">
@@ -469,7 +387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P06-Ob-gxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1119" y="1765"/>
+            <point key="canvasLocation" x="371" y="889"/>
         </scene>
         <!--Twitter View Controller-->
         <scene sceneID="3WO-qN-gmM">
@@ -497,36 +415,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lly-7B-cIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1822" y="1765"/>
+            <point key="canvasLocation" x="1742" y="837"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="pRG-4x-rTB">
+        <!--Roman-->
+        <scene sceneID="81U-hC-Jw5">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="usG-E6-kFe" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="CollectionNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="Hjy-xs-XKF" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Roman" image="Colosseum-100" id="JIE-zz-hgj">
+                        <inset key="imageInsets" minX="34" minY="35" maxX="34" maxY="31"/>
+                    </tabBarItem>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" id="k5K-P9-lLW"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="khM-Kr-AXj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="L6H-NR-D8o">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="QoU-G1-LOt" kind="relationship" relationship="viewControllers" id="tP7-tW-5hu"/>
-                        <segue destination="CeI-za-cPl" kind="relationship" relationship="viewControllers" id="9NY-SP-arO"/>
-                        <segue destination="YDU-1x-Byl" kind="relationship" relationship="viewControllers" id="EhV-gx-Wyj"/>
+                        <segue destination="YDU-1x-Byl" kind="relationship" relationship="rootViewController" id="bSN-zQ-Nv3"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WUr-aF-4Ow" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ggo-lC-c3u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1252" y="156"/>
+            <point key="canvasLocation" x="1203" y="-521"/>
         </scene>
     </scenes>
     <resources>
-        <image name="Archeology-100" width="100" height="100"/>
         <image name="Collapse Arrow-96" width="96" height="96"/>
         <image name="Colosseum-100" width="100" height="100"/>
         <image name="High Volume-100" width="100" height="100"/>
-        <image name="Library-100" width="100" height="100"/>
         <image name="Pause-100" width="100" height="100"/>
         <image name="Play-100" width="100" height="100"/>
         <image name="Search-104" width="104" height="104"/>
