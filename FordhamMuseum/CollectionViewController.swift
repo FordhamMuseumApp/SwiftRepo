@@ -15,8 +15,38 @@ class CollectionViewController: UIViewController {
     @IBOutlet weak var twitterButton: UIBarButtonItem!
     @IBOutlet weak var audioButton: UIBarButtonItem!
     
+    var endpoint = "greek"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        var api : NSString = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/date^\(endpoint)^all^and/title!descri!covera!date!langua!image/nosort/1024/0/0/0/0/0/json"
+        var urlStr : NSString = api.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        var url: NSURL = NSURL(string: urlStr as String)!
+        print(url)
+        let request = NSURLRequest(
+            URL: url,
+            cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData,
+            timeoutInterval: 10)
+        
+        let session = NSURLSession(
+            configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
+            delegate: nil,
+            delegateQueue: NSOperationQueue.mainQueue()
+        )
+        
+        let task: NSURLSessionDataTask = session.dataTaskWithRequest(request,
+            completionHandler: { (dataOrNil, response, error) in
+                if let data = dataOrNil {
+                    if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(
+                        data, options:[]) as? NSDictionary {
+                            print("response: \(responseDictionary)")
+                            
+                            
+                    }
+                }
+        })
+        task.resume()
         
         // Do any additional setup after loading the view.
     }
