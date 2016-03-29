@@ -52,6 +52,9 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 <img src='http://i.imgur.com/xruVpZT.jpg' title='Wireframe' width='' alt='Wireframe' />
  
+ ## Data Schema
+<img src='https://cloud.githubusercontent.com/assets/16281440/13799276/3c43f6e0-eaf4-11e5-9eb6-edb65aea4c83.jpeg' title='Wireframe' width='' alt='Wireframe' />
+ 
 ## License
       
           Copyright [2016] [Michael Gonzales, Michael Ceraso, Aaron Laub]
