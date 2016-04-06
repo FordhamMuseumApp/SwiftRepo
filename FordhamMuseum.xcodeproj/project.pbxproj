@@ -121,6 +121,7 @@
 				686C8DD61C86837B006DC5D1 /* Resources */,
 				D65A5F81E0A0A25C9F592DA3 /* Embed Pods Frameworks */,
 				0545AA1496BC6C6C6A659348 /* Copy Pods Resources */,
+				F9BD1BAE1CB4E59600FF97E5 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -223,6 +224,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FordhamMuseum/Pods-FordhamMuseum-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		F9BD1BAE1CB4E59600FF97E5 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" 25340281b0e0c951f94ae4e6b2a998e87ea63519 10d18b53f323c1fb58651f1806c1994cb2c38994d83a8c837e6937280e0581dd";
 		};
 /* End PBXShellScriptBuildPhase section */
 
