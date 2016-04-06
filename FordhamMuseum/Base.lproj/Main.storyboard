@@ -2,8 +2,9 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="i4H-A4-hRS">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
     <scenes>
@@ -34,14 +35,50 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RFF-b1-TIq">
+                                <rect key="frame" x="0.0" y="64" width="95" height="85"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ERh-ow-JhN">
+                                    <size key="itemSize" width="90" height="90"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="wgr-bU-1Tj" customClass="MyCollectionViewCell" customModule="FordhamMuseum" customModuleProvider="target">
+                                        <rect key="frame" x="3" y="0.0" width="90" height="90"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UEl-oQ-Taj">
+                                                    <rect key="frame" x="-3" y="3" width="90" height="90"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                        <connections>
+                                            <outlet property="myImage" destination="UEl-oQ-Taj" id="Kc2-iz-Sb6"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="YDU-1x-Byl" id="1CY-nQ-mBT"/>
+                                    <outlet property="delegate" destination="YDU-1x-Byl" id="4oX-fi-23y"/>
+                                </connections>
+                            </collectionView>
                         </subviews>
                         <color key="backgroundColor" red="0.1058823529" green="0.2901960784" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="VcP-nr-gak" secondAttribute="trailing" constant="101" id="4Lz-f8-jna"/>
                             <constraint firstItem="RH5-Fl-iez" firstAttribute="top" secondItem="VcP-nr-gak" secondAttribute="bottom" constant="143" id="6Os-aR-iS3"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RFF-b1-TIq" secondAttribute="trailing" constant="-20" id="Boe-cY-mvd"/>
                             <constraint firstAttribute="trailing" secondItem="RH5-Fl-iez" secondAttribute="trailing" constant="90" id="Tvu-KE-7gk"/>
                             <constraint firstItem="0jW-W0-85z" firstAttribute="top" secondItem="RH5-Fl-iez" secondAttribute="bottom" constant="8" id="fDm-i5-hbz"/>
+                            <constraint firstItem="RFF-b1-TIq" firstAttribute="top" secondItem="7cq-BH-CPb" secondAttribute="bottom" id="fbR-VC-S70"/>
+                            <constraint firstItem="RFF-b1-TIq" firstAttribute="leading" secondItem="R3t-A9-waj" secondAttribute="leadingMargin" constant="-20" id="heC-1P-rcJ"/>
                             <constraint firstItem="RH5-Fl-iez" firstAttribute="leading" secondItem="R3t-A9-waj" secondAttribute="leading" constant="91" id="iMB-b5-c7f"/>
+                            <constraint firstItem="0jW-W0-85z" firstAttribute="top" secondItem="RFF-b1-TIq" secondAttribute="bottom" id="kmA-9S-r1b"/>
                             <constraint firstItem="VcP-nr-gak" firstAttribute="leading" secondItem="R3t-A9-waj" secondAttribute="leading" constant="102" id="l7M-lz-DNq"/>
                         </constraints>
                     </view>
@@ -104,6 +141,9 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="myCV" destination="RFF-b1-TIq" id="YOe-s6-o4O"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onv-RU-Bz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
