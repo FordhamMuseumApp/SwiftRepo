@@ -88,7 +88,9 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
             print(imageUrl)
             cell.myImage.setImageWithURL(imageUrl)
         }
-        
+        cell.layer.borderColor = UIColor.grayColor().CGColor
+        cell.layer.borderWidth = 1
+        cell.layer.cornerRadius = 8
         cell.backgroundColor = UIColor.yellowColor() // make cell more visible in our example project
         
         return cell
