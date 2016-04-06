@@ -42,7 +42,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
 
-    @IBAction func send(sender: AnyObject) {
+ /*   @IBAction func send(sender: AnyObject) {
         let tweet = tweetToSend.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
         
         client.compose(tweet!, params: nil, completion: { (error) -> () in
@@ -57,7 +57,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func textViewDidChange(textView: UITextView) {
         tweetToSend = tweetText.text
         
-    }
+    } */
 
     
     // MARK: - Navigation

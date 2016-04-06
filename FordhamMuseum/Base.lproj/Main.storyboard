@@ -2,7 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="i4H-A4-hRS">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
@@ -104,7 +104,7 @@
                                     </constraints>
                                     <state key="normal" image="Search-104"/>
                                     <connections>
-                                        <segue destination="CqA-YX-5hs" kind="push" id="nC1-Uk-PKZ"/>
+                                        <segue destination="CqA-YX-5hs" kind="presentation" id="dCh-xJ-a8O"/>
                                     </connections>
                                 </button>
                             </barButtonItem>
@@ -209,7 +209,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nc6-aW-Cbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1653" y="113"/>
+            <point key="canvasLocation" x="1419" y="-605"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="kcn-JU-rgw">
@@ -356,7 +356,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P06-Ob-gxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2348" y="113"/>
+            <point key="canvasLocation" x="1807" y="27"/>
         </scene>
         <!--Twitter View Controller-->
         <scene sceneID="DXd-Ah-x3o">
@@ -399,40 +399,46 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="77" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Utv-Vd-kxO">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Utv-Vd-kxO">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="3Y5-Ps-Ais">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="menuCell" rowHeight="70" id="VlR-Dl-Y7M" customClass="MenuTableViewCell" customModule="FordhamMuseum" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="70"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" rowHeight="44" id="VlR-Dl-Y7M" customClass="MenuTableViewCell" customModule="FordhamMuseum" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="48" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VlR-Dl-Y7M" id="Cqx-2J-zKW">
-                                            <rect key="frame" x="0.0" y="0.0" width="287" height="69"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species of Art" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABf-BU-Ygd">
-                                                    <rect key="frame" x="8" y="22" width="231" height="23"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DHT-Au-aw5">
-                                                    <rect key="frame" x="247" y="15" width="40" height="40"/>
+                                                    <rect key="frame" x="272" y="2" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="DHT-Au-aw5" secondAttribute="height" multiplier="61:60" id="1p9-GU-pvS"/>
                                                     </constraints>
                                                 </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species of Art" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABf-BU-Ygd">
+                                                    <rect key="frame" x="8" y="10" width="264" height="23"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="DHT-Au-aw5" secondAttribute="bottom" constant="14" id="47r-WG-mrP"/>
-                                                <constraint firstItem="DHT-Au-aw5" firstAttribute="top" secondItem="Cqx-2J-zKW" secondAttribute="top" constant="15" id="7gL-v1-HoW"/>
-                                                <constraint firstItem="ABf-BU-Ygd" firstAttribute="top" secondItem="Cqx-2J-zKW" secondAttribute="top" constant="22" id="E6X-8z-hhb"/>
-                                                <constraint firstItem="DHT-Au-aw5" firstAttribute="leading" secondItem="ABf-BU-Ygd" secondAttribute="trailing" constant="8" id="WHz-e9-QR5"/>
+                                                <constraint firstAttribute="bottom" secondItem="DHT-Au-aw5" secondAttribute="bottom" constant="1" id="47r-WG-mrP"/>
+                                                <constraint firstItem="DHT-Au-aw5" firstAttribute="top" secondItem="Cqx-2J-zKW" secondAttribute="top" constant="2" id="7gL-v1-HoW"/>
+                                                <constraint firstItem="ABf-BU-Ygd" firstAttribute="top" secondItem="Cqx-2J-zKW" secondAttribute="top" constant="10" id="E6X-8z-hhb"/>
+                                                <constraint firstItem="DHT-Au-aw5" firstAttribute="leading" secondItem="ABf-BU-Ygd" secondAttribute="trailing" id="WHz-e9-QR5"/>
                                                 <constraint firstItem="ABf-BU-Ygd" firstAttribute="leading" secondItem="Cqx-2J-zKW" secondAttribute="leading" constant="8" id="b4O-61-SZr"/>
-                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="ABf-BU-Ygd" secondAttribute="bottom" constant="22" id="rWP-RS-xNy"/>
-                                                <constraint firstAttribute="trailing" secondItem="DHT-Au-aw5" secondAttribute="trailing" id="tWq-QK-hYg"/>
+                                                <constraint firstAttribute="trailing" secondItem="DHT-Au-aw5" secondAttribute="trailing" constant="8" id="tWq-QK-hYg"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" selected="YES"/>
+                                        </accessibility>
                                         <connections>
                                             <outlet property="speciesImage" destination="DHT-Au-aw5" id="hGG-ER-LQf"/>
                                             <outlet property="speciesLabel" destination="ABf-BU-Ygd" id="n1B-0O-WgH"/>
@@ -451,7 +457,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BmK-Zo-i2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1274" y="-605"/>
+            <point key="canvasLocation" x="1040" y="-605"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Oaj-bX-BQH">
