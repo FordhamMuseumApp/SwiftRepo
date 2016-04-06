@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kKD-gf-aqk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kKD-gf-aqk">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
     </dependencies>
@@ -47,23 +47,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="EKq-ZM-1NO">
                         <rightBarButtonItems>
-                            <barButtonItem style="plain" id="pOp-3Z-epm">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YyK-QY-NUf">
-                                    <rect key="frame" x="269" y="4" width="35" height="35"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="35" id="93X-PW-W6z"/>
-                                        <constraint firstAttribute="width" constant="35" id="GCb-ny-xmx"/>
-                                    </constraints>
-                                    <state key="normal" image="Search-104"/>
-                                    <connections>
-                                        <segue destination="CqA-YX-5hs" kind="push" id="nC1-Uk-PKZ"/>
-                                    </connections>
-                                </button>
-                            </barButtonItem>
                             <barButtonItem style="plain" id="mpw-fQ-Fz9">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TkL-Sy-VVt">
-                                    <rect key="frame" x="226" y="4" width="35" height="35"/>
+                                    <rect key="frame" x="269" y="4" width="35" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="35" id="9mE-mD-LWH"/>
@@ -77,7 +63,7 @@
                             </barButtonItem>
                             <barButtonItem style="plain" id="PtX-re-Ldj">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xJD-tb-BFJ">
-                                    <rect key="frame" x="183" y="4" width="35" height="35"/>
+                                    <rect key="frame" x="226" y="4" width="35" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <constraints>
                                         <constraint firstAttribute="width" constant="35" id="1gO-mU-XhE"/>
@@ -85,7 +71,21 @@
                                     </constraints>
                                     <state key="normal" image="Twitter-100"/>
                                     <connections>
-                                        <segue destination="1al-vn-gJp" kind="push" id="dCk-ah-epg"/>
+                                        <segue destination="CIu-hf-nP2" kind="push" id="tCx-Xg-Wsr"/>
+                                    </connections>
+                                </button>
+                            </barButtonItem>
+                            <barButtonItem style="plain" id="pOp-3Z-epm">
+                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YyK-QY-NUf">
+                                    <rect key="frame" x="183" y="4" width="35" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="35" id="93X-PW-W6z"/>
+                                        <constraint firstAttribute="width" constant="35" id="GCb-ny-xmx"/>
+                                    </constraints>
+                                    <state key="normal" image="Search-104"/>
+                                    <connections>
+                                        <segue destination="CqA-YX-5hs" kind="push" id="nC1-Uk-PKZ"/>
                                     </connections>
                                 </button>
                             </barButtonItem>
@@ -307,32 +307,33 @@
             <point key="canvasLocation" x="371" y="889"/>
         </scene>
         <!--Twitter View Controller-->
-        <scene sceneID="3WO-qN-gmM">
+        <scene sceneID="DXd-Ah-x3o">
             <objects>
-                <viewController id="1al-vn-gJp" customClass="TwitterViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="YLM-0s-qWC"/>
-                        <viewControllerLayoutGuide type="bottom" id="dmt-ZK-kkt"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tWz-uL-wIh">
+                <tableViewController id="CIu-hf-nP2" customClass="TwitterViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fU0-hX-L6j">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="@FordhamMuseum Twitter Feed" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7AZ-9l-Elb">
-                                <rect key="frame" x="36" y="229" width="249" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" red="0.1058823529" green="0.2901960784" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="upe-oO-QXA"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lly-7B-cIh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="YnS-bd-cmZ">
+                                <rect key="frame" x="0.0" y="92" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YnS-bd-cmZ" id="p5a-aa-ibc">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="CIu-hf-nP2" id="U0L-9g-sST"/>
+                            <outlet property="delegate" destination="CIu-hf-nP2" id="fUP-sf-flX"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="7A7-Mg-lqR"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DcN-Ej-KsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1742" y="837"/>
+            <point key="canvasLocation" x="1920" y="-58"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="kAV-Gt-LWd">
