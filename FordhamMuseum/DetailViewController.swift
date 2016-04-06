@@ -16,9 +16,6 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var materialHeightLabel: UILabel!
     @IBOutlet weak var collectionCollectionNumberLabel: UILabel!
     @IBOutlet weak var museumLabel: UILabel!
-    @IBOutlet weak var playButtonImage: UIImageView!
-    @IBOutlet weak var pauseButtonImage: UIImageView!
-    @IBOutlet weak var skipBackButtonImage: UIImageView!
    
     
     

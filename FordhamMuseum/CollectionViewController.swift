@@ -8,14 +8,15 @@
 
 import UIKit
 import AFNetworking
+
 var window: UIWindow?
 
-class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate  {
-
+class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, MenuViewControllerDelegate{
     @IBOutlet weak var myCV: UICollectionView!
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var twitterButton: UIBarButtonItem!
     @IBOutlet weak var audioButton: UIBarButtonItem!
+    
     
     var art:[NSDictionary]?
     
@@ -29,41 +30,21 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         myCV.dataSource = self
         myCV.delegate = self
         
-        var api : NSString = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/date^\(endpoint)^all^and/title!descri!covera!date!langua!image/nosort/1024/0/0/0/0/0/json"
-        var urlStr : NSString = api.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-        var url: NSURL = NSURL(string: urlStr as String)!
-        let request = NSURLRequest(
-            URL: url,
-            cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData,
-            timeoutInterval: 10)
+        apiCall()
         
-        let session = NSURLSession(
-            configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
-            delegate: nil,
-            delegateQueue: NSOperationQueue.mainQueue()
-        )
-        
-        let task: NSURLSessionDataTask = session.dataTaskWithRequest(request,
-            completionHandler: { (dataOrNil, response, error) in
-                if let data = dataOrNil {
-                    if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(
-                        data, options:[]) as? NSDictionary {
-                           self.art = responseDictionary["records"] as! [NSDictionary]
-                           // print(self.art)
-                           self.myCV.reloadData()
-                            
-                    }
-                }
-        })
-        task.resume()
         
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        apiCall()
+        
     }
     
     // tell the collection view how many cells to make
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if let art = art{
-            print(art.count)
+         //   print(art.count)
             return art.count
         } else {
             return 0
@@ -78,20 +59,20 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         let piece = art![indexPath.row]
         let title = piece["title"] as! String
-        print(title)
+       // print(title)
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         if let pointer=piece["pointer"]{
-            print(pointer)
+            //print(pointer)
             let imagePath = "http://libdigcoll2.library.fordham.edu:2012/cgi-bin/getimage.exe?CISOROOT=/Hist&CISOPTR=\(pointer)&DMSCALE=1.25000&DMWIDTH=90&DMHEIGHT=90&DMX=0&DMY=0&DMTEXT=&REC=1&DMTHUMB=1&DMROTATE=0%27"
             let imageUrl: NSURL = NSURL(string: imagePath as String)!
-            print(imageUrl)
+           // print(imageUrl)
             cell.myImage.setImageWithURL(imageUrl)
         }
-        cell.layer.borderColor = UIColor.grayColor().CGColor
+        cell.layer.borderColor = UIColor.blueColor().CGColor
         cell.layer.borderWidth = 1
         cell.layer.cornerRadius = 8
-        cell.backgroundColor = UIColor.yellowColor() // make cell more visible in our example project
+        cell.backgroundColor = UIColor.grayColor() // make cell more visible in our example project
         
         return cell
     }
@@ -107,14 +88,61 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     }
     
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "menuSegue"{
+            let menu = segue.destinationViewController as! MenuViewController
+            menu.delegate = self
+            
+        
+        }
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
-    */
+    
+    func sendValue(value: NSString){
+        print(value)
+        endpoint = value as String
+        myCV.reloadData()
+        
+    }
+    
+    func apiCall() {
+        var api : NSString = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/date^\(endpoint)^all^and/title!descri!covera!date!langua!image/nosort/1024/0/0/0/0/0/json"
+        var urlStr : NSString = api.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        print(urlStr)
+        var url: NSURL = NSURL(string: urlStr as String)!
+        let request = NSURLRequest(
+            URL: url,
+            cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData,
+            timeoutInterval: 10)
+        
+        let session = NSURLSession(
+            configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
+            delegate: nil,
+            delegateQueue: NSOperationQueue.mainQueue()
+        )
+        
+        let task: NSURLSessionDataTask = session.dataTaskWithRequest(request,
+                                                                     completionHandler: { (dataOrNil, response, error) in
+                                                                        if let data = dataOrNil {
+                                                                            if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(
+                                                                                data, options:[]) as? NSDictionary {
+                                                                                self.art = responseDictionary["records"] as! [NSDictionary]
+                                                                                // print(self.art)
+                                                                                self.myCV.reloadData()
+                                                                                
+                                                                            }
+                                                                        }
+        })
+        
+        task.resume()
+    }
+    
 
 }
+
+

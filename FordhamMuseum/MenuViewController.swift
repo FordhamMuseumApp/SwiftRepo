@@ -8,16 +8,23 @@
 
 import UIKit
 
+protocol MenuViewControllerDelegate {
+    func sendValue (value : NSString)
+}
+
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    
-    let species = ["Attic Vase-Painting", "South Italian Vase-Painting", "Etruscan Art", "Greek Sculpture", "Roman Sculpture", "Mosaics", "Glass", "Numismatics"]
+    var delegate: MenuViewControllerDelegate!
+    let species = ["Greek", "Etruscan", "Roman", "Mosaic"]
+    let endpoints = ["greek", "etruscan", "roman", "mosaic"]
+    let images = ["greek", "etruscan", "roman", "mosaic"]
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         tableView.dataSource = self
         tableView.delegate = self
-
+        tableView.tableFooterView = UIView(frame: CGRectZero) // limit the tableview lines
 
         // Do any additional setup after loading the view.
     }
@@ -36,30 +43,21 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.selectionStyle = .None
         let title = species[indexPath.item] as! String
         cell.speciesLabel.text = title
-        print(title)
-        cell.speciesImage.image = UIImage(named:"Helmet")
+       // print(title)
+        cell.speciesImage.image = UIImage(named: images[indexPath.item] as! String)
         
         return cell
     }
-
- /*   @IBAction func send(sender: AnyObject) {
-        let tweet = tweetToSend.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLQueryAllowedCharacterSet())
-        
-        client.compose(tweet!, params: nil, completion: { (error) -> () in
-            print("about to tweet")
-        })
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("tapped")
+        self.delegate?.sendValue(endpoints[indexPath.item])
+        print(species[indexPath.item])
         dismissViewControllerAnimated(true, completion: {})
     }
-    func tappedAwayFunction(sender: UITapGestureRecognizer){
-        tweetText.resignFirstResponder()
-    }
-    
-    func textViewDidChange(textView: UITextView) {
-        tweetToSend = tweetText.text
-        
-    } */
 
-    
+
+    /*
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -73,6 +71,6 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
        // collectionViewController.endpoint = specie
         
     }
-    
+    */
 
 }
