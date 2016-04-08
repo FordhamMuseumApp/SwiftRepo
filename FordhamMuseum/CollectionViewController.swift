@@ -126,17 +126,15 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
             delegateQueue: NSOperationQueue.mainQueue()
         )
         
-        let task: NSURLSessionDataTask = session.dataTaskWithRequest(request,
-                                                                     completionHandler: { (dataOrNil, response, error) in
-                                                                        if let data = dataOrNil {
-                                                                            if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(
-                                                                                data, options:[]) as? NSDictionary {
-                                                                                self.art = responseDictionary["records"] as! [NSDictionary]
-                                                                                // print(self.art)
-                                                                                self.myCV.reloadData()
+        let task: NSURLSessionDataTask = session.dataTaskWithRequest(request, completionHandler: { (dataOrNil, response, error) in
+            if let data = dataOrNil {
+                if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(data, options:[]) as? NSDictionary {
+                    self.art = responseDictionary["records"] as! [NSDictionary]
+                    // print(self.art)
+                    self.myCV.reloadData()
                                                                                 
-                                                                            }
-                                                                        }
+                }
+            }
         })
         
         task.resume()
