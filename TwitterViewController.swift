@@ -11,7 +11,6 @@ import TwitterKit
 
 class TwitterViewController: TWTRTimelineViewController {
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

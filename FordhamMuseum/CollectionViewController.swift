@@ -16,13 +16,15 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var twitterButton: UIBarButtonItem!
     @IBOutlet weak var audioButton: UIBarButtonItem!
+    @IBOutlet weak var searchLabel: UILabel!
     
     
     var art:[NSDictionary]?
     
     let reuseIdentifier = "cell" // also enter this string as the cell identifier in the storyboard
     
-    var endpoint = "greek"
+    var endpoint = "0"
+    var specie = "All"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,13 +33,14 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         myCV.delegate = self
         
         apiCall()
-        
-        
         // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
         apiCall()
+        
+        // Allow for editable label presentation:
+        searchLabel.text = "Catalog of Museum Objects: \(specie)"
         
     }
     
@@ -103,15 +106,16 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         // Pass the selected object to the new view controller.
     }
     
-    func sendValue(value: NSString){
-        print(value)
-        endpoint = value as String
+    func sendValues(endpnt: NSString, spcie: NSString){
+        print(endpnt)
+        endpoint = endpnt as String
+        specie = spcie as String
         myCV.reloadData()
         
     }
     
     func apiCall() {
-        var api : NSString = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/date^\(endpoint)^all^and/title!descri!covera!date!langua!image/nosort/1024/0/0/0/0/0/json"
+        var api : NSString = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/date^\(endpoint)^any^or/title!descri!covera!date!langua!image/nosort/1024/0/0/0/0/0/json"
         var urlStr : NSString = api.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         print(urlStr)
         var url: NSURL = NSURL(string: urlStr as String)!

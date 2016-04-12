@@ -15,6 +15,7 @@
 		689D4AB31CB489BD003B453B /* MenuTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689D4AB21CB489BD003B453B /* MenuTableViewCell.swift */; };
 		689D4AB51CB5704C003B453B /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689D4AB41CB5704C003B453B /* MyCollectionViewCell.swift */; };
 		88BA12FC02422BC86FF9CAB1 /* Pods_FordhamMuseum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC63D4749974A63AAF53E24 /* Pods_FordhamMuseum.framework */; };
+		F93335C81CBDAE0F002CFAF8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93335C71CBDAE0E002CFAF8 /* SearchViewController.swift */; };
 		F9AB21F01C9202B300056BF4 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB21EF1C9202B300056BF4 /* CollectionViewController.swift */; };
 		F9AB21F21C92038900056BF4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB21F11C92038900056BF4 /* DetailViewController.swift */; };
 		F9AB21F41C92039700056BF4 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB21F31C92039700056BF4 /* TwitterViewController.swift */; };
@@ -33,6 +34,7 @@
 		689D4AB41CB5704C003B453B /* MyCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyCollectionViewCell.swift; sourceTree = "<group>"; };
 		9BC63D4749974A63AAF53E24 /* Pods_FordhamMuseum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FordhamMuseum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30249BB15369324A596D2EC /* Pods-FordhamMuseum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FordhamMuseum.release.xcconfig"; path = "Pods/Target Support Files/Pods-FordhamMuseum/Pods-FordhamMuseum.release.xcconfig"; sourceTree = "<group>"; };
+		F93335C71CBDAE0E002CFAF8 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		F9AB21EF1C9202B300056BF4 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		F9AB21F11C92038900056BF4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F9AB21F31C92039700056BF4 /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterViewController.swift; path = ../TwitterViewController.swift; sourceTree = "<group>"; };
@@ -80,11 +82,10 @@
 		686C8DDA1C86837B006DC5D1 /* FordhamMuseum */ = {
 			isa = PBXGroup;
 			children = (
-				689D4AB41CB5704C003B453B /* MyCollectionViewCell.swift */,
 				686C8DDB1C86837B006DC5D1 /* AppDelegate.swift */,
+				F93335C91CBDAE24002CFAF8 /* Cells */,
 				F9AB21EE1C91FDAE00056BF4 /* ViewControllers */,
 				686C8DDF1C86837B006DC5D1 /* Main.storyboard */,
-				689D4AB21CB489BD003B453B /* MenuTableViewCell.swift */,
 				686C8DE21C86837B006DC5D1 /* Assets.xcassets */,
 				686C8DE41C86837B006DC5D1 /* LaunchScreen.storyboard */,
 				686C8DE71C86837C006DC5D1 /* Info.plist */,
@@ -100,12 +101,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F93335C91CBDAE24002CFAF8 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				689D4AB21CB489BD003B453B /* MenuTableViewCell.swift */,
+				689D4AB41CB5704C003B453B /* MyCollectionViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
 		F9AB21EE1C91FDAE00056BF4 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				F9AB21EF1C9202B300056BF4 /* CollectionViewController.swift */,
 				F9AB21F11C92038900056BF4 /* DetailViewController.swift */,
 				689D4AB01CB48810003B453B /* MenuViewController.swift */,
+				F93335C71CBDAE0E002CFAF8 /* SearchViewController.swift */,
 				F9AB21F31C92039700056BF4 /* TwitterViewController.swift */,
 			);
 			name = ViewControllers;
@@ -250,6 +261,7 @@
 			files = (
 				F9AB21F01C9202B300056BF4 /* CollectionViewController.swift in Sources */,
 				689D4AB51CB5704C003B453B /* MyCollectionViewCell.swift in Sources */,
+				F93335C81CBDAE0F002CFAF8 /* SearchViewController.swift in Sources */,
 				689D4AB11CB48810003B453B /* MenuViewController.swift in Sources */,
 				689D4AB31CB489BD003B453B /* MenuTableViewCell.swift in Sources */,
 				686C8DDC1C86837B006DC5D1 /* AppDelegate.swift in Sources */,

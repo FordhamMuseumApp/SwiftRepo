@@ -9,14 +9,14 @@
 import UIKit
 
 protocol MenuViewControllerDelegate {
-    func sendValue (value : NSString)
+    func sendValues (endpnt : NSString, spcie : NSString)
 }
 
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var delegate: MenuViewControllerDelegate!
-    let species = ["Greek", "Etruscan", "Roman", "Mosaic"]
-    let endpoints = ["greek", "etruscan", "roman", "mosaic"]
-    let images = ["greek", "etruscan", "roman", "mosaic"]
+    let species = ["Greek", "Etruscan", "Roman", "Other", "All"]
+    let endpoints = ["greek", "etruscan+etrusco-corinthian", "roman", "babylonian+cypriote+italic+villanovan", "0"]
+    let images = ["greek", "etruscan", "roman", "lyre", "mosaic"]
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -24,9 +24,13 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tableView.dataSource = self
         tableView.delegate = self
-        tableView.tableFooterView = UIView(frame: CGRectZero) // limit the tableview lines
+        
+        tableView.tableFooterView = UIView(frame: CGRectZero) // limits excess tableview cells
 
-        // Do any additional setup after loading the view.
+        // Allows for selection animation:
+       /* var index = NSIndexPath(forRow: 0, inSection: 0)
+        self.tableView.selectRowAtIndexPath(index, animated: true, scrollPosition: UITableViewScrollPosition.Middle)
+        self.tableView(self.tableView, didSelectRowAtIndexPath: index) */
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,7 +55,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("tapped")
-        self.delegate?.sendValue(endpoints[indexPath.item])
+        self.delegate?.sendValues(endpoints[indexPath.item], spcie: species[indexPath.item])
         print(species[indexPath.item])
         dismissViewControllerAnimated(true, completion: {})
     }
