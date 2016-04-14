@@ -61,7 +61,7 @@
                                         </constraints>
                                         <connections>
                                             <outlet property="myImage" destination="UEl-oQ-Taj" id="Kc2-iz-Sb6"/>
-                                            <segue destination="f8Y-4d-9V5" kind="push" id="CPr-RL-Ve5"/>
+                                            <segue destination="f8Y-4d-9V5" kind="push" identifier="detailSegue" id="CPr-RL-Ve5"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -292,86 +292,71 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhe-jX-0wz">
-                                <rect key="frame" x="20" y="254" width="280" height="22"/>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Region, Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1i-DN-viR">
-                                <rect key="frame" x="20" y="284" width="280" height="22"/>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Material, Height" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uff-Bi-CEz">
-                                <rect key="frame" x="20" y="314" width="280" height="22"/>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Collection, Collection Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rW7-rg-tkr">
-                                <rect key="frame" x="20" y="344" width="280" height="22"/>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Museum Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIp-jY-XpW">
-                                <rect key="frame" x="20" y="374" width="280" height="22"/>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head-1" translatesAutoresizingMaskIntoConstraints="NO" id="7fV-zG-SFn">
-                                <rect key="frame" x="73" y="72" width="175" height="175"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="175" id="EJ0-99-S1I"/>
-                                    <constraint firstAttribute="width" secondItem="7fV-zG-SFn" secondAttribute="height" multiplier="1:1" id="H76-1h-ibx"/>
-                                    <constraint firstAttribute="width" constant="280" id="UXZ-rZ-wkj"/>
-                                    <constraint firstAttribute="height" constant="174" id="lVu-wR-4jc"/>
-                                    <constraint firstAttribute="height" constant="175" id="nkQ-ag-Wpx"/>
-                                </constraints>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="UXZ-rZ-wkj"/>
-                                        <exclude reference="lVu-wR-4jc"/>
-                                    </mask>
-                                </variation>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7fV-zG-SFn">
+                                <rect key="frame" x="0.0" y="64" width="320" height="225"/>
                             </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3pG-tO-c5A">
+                                <rect key="frame" x="0.0" y="288" width="320" height="192"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Material, Height" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uff-Bi-CEz">
+                                        <rect key="frame" x="0.0" y="60" width="320" height="22"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Collection, Collection Number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rW7-rg-tkr">
+                                        <rect key="frame" x="0.0" y="90" width="320" height="22"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Museum Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IIp-jY-XpW">
+                                        <rect key="frame" x="0.0" y="120" width="320" height="72"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fhe-jX-0wz">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="22"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Region, Date" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f1i-DN-viR">
+                                        <rect key="frame" x="0.0" y="30" width="320" height="22"/>
+                                        <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.1058823529" green="0.2901960784" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="f1i-DN-viR" firstAttribute="top" secondItem="fhe-jX-0wz" secondAttribute="bottom" constant="8" id="1Y9-q2-YHF"/>
+                                    <constraint firstAttribute="trailing" secondItem="fhe-jX-0wz" secondAttribute="trailing" id="4Lu-pP-Ha3"/>
+                                    <constraint firstItem="fhe-jX-0wz" firstAttribute="leading" secondItem="3pG-tO-c5A" secondAttribute="leading" id="6bc-h5-Oj3"/>
+                                    <constraint firstItem="IIp-jY-XpW" firstAttribute="top" secondItem="rW7-rg-tkr" secondAttribute="bottom" constant="8" id="BT2-Ej-fkd"/>
+                                    <constraint firstAttribute="bottom" secondItem="IIp-jY-XpW" secondAttribute="bottom" id="Bme-E8-KJf"/>
+                                    <constraint firstItem="uff-Bi-CEz" firstAttribute="top" secondItem="f1i-DN-viR" secondAttribute="bottom" constant="8" id="Bxp-bY-d9O"/>
+                                    <constraint firstItem="rW7-rg-tkr" firstAttribute="top" secondItem="uff-Bi-CEz" secondAttribute="bottom" constant="8" id="Fen-Gu-o4Y"/>
+                                    <constraint firstItem="IIp-jY-XpW" firstAttribute="leading" secondItem="3pG-tO-c5A" secondAttribute="leading" id="Og2-r1-wNf"/>
+                                    <constraint firstAttribute="trailing" secondItem="IIp-jY-XpW" secondAttribute="trailing" id="RxK-T7-w2c"/>
+                                    <constraint firstAttribute="trailing" secondItem="uff-Bi-CEz" secondAttribute="trailing" id="To6-fT-cdW"/>
+                                    <constraint firstAttribute="trailing" secondItem="rW7-rg-tkr" secondAttribute="trailing" id="lsg-Ti-8Me"/>
+                                    <constraint firstAttribute="height" constant="192" id="n9d-Xp-W1Q"/>
+                                    <constraint firstItem="uff-Bi-CEz" firstAttribute="leading" secondItem="3pG-tO-c5A" secondAttribute="leading" id="rx5-9j-Q1K"/>
+                                    <constraint firstAttribute="trailing" secondItem="f1i-DN-viR" secondAttribute="trailing" id="tTX-e4-mRi"/>
+                                    <constraint firstAttribute="width" constant="320" id="u8A-oi-mGU"/>
+                                    <constraint firstItem="fhe-jX-0wz" firstAttribute="top" secondItem="3pG-tO-c5A" secondAttribute="top" id="vb3-wL-gs0"/>
+                                    <constraint firstItem="f1i-DN-viR" firstAttribute="leading" secondItem="3pG-tO-c5A" secondAttribute="leading" id="vnm-C0-46Y"/>
+                                    <constraint firstItem="rW7-rg-tkr" firstAttribute="leading" secondItem="3pG-tO-c5A" secondAttribute="leading" id="yiu-Sc-MpO"/>
+                                </constraints>
+                            </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.1058823529" green="0.2901960784" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="f1i-DN-viR" firstAttribute="leading" secondItem="dYG-9f-Ia6" secondAttribute="leading" constant="20" id="3YE-L2-Ki4"/>
-                            <constraint firstItem="IIp-jY-XpW" firstAttribute="top" secondItem="rW7-rg-tkr" secondAttribute="bottom" constant="8" id="92J-iU-gwJ"/>
-                            <constraint firstItem="rW7-rg-tkr" firstAttribute="leading" secondItem="dYG-9f-Ia6" secondAttribute="leading" constant="20" id="Dai-1k-kyw"/>
-                            <constraint firstAttribute="trailing" secondItem="rW7-rg-tkr" secondAttribute="trailing" constant="20" id="Dvm-i2-awq"/>
-                            <constraint firstItem="f1i-DN-viR" firstAttribute="top" secondItem="fhe-jX-0wz" secondAttribute="bottom" constant="8" id="EBz-7d-42c"/>
-                            <constraint firstAttribute="trailing" secondItem="f1i-DN-viR" secondAttribute="trailing" constant="20" id="EQi-Gw-ULd"/>
-                            <constraint firstItem="rW7-rg-tkr" firstAttribute="top" secondItem="uff-Bi-CEz" secondAttribute="bottom" constant="8" id="FKi-TW-rYt"/>
-                            <constraint firstItem="7fV-zG-SFn" firstAttribute="top" secondItem="2eP-Jf-Zty" secondAttribute="bottom" constant="8" id="Ivt-BQ-44v"/>
-                            <constraint firstItem="fhe-jX-0wz" firstAttribute="top" secondItem="7fV-zG-SFn" secondAttribute="bottom" constant="7" id="LKM-SI-kuV"/>
-                            <constraint firstAttribute="trailing" secondItem="fhe-jX-0wz" secondAttribute="trailing" constant="20" id="NxA-Hi-p7J"/>
-                            <constraint firstItem="7fV-zG-SFn" firstAttribute="leading" secondItem="dYG-9f-Ia6" secondAttribute="leading" constant="73" id="UlU-KF-ZDE"/>
-                            <constraint firstItem="IIp-jY-XpW" firstAttribute="leading" secondItem="dYG-9f-Ia6" secondAttribute="leading" constant="20" id="b2h-y4-eYv"/>
-                            <constraint firstAttribute="trailing" secondItem="uff-Bi-CEz" secondAttribute="trailing" constant="20" id="b50-v2-g0x"/>
-                            <constraint firstAttribute="trailing" secondItem="IIp-jY-XpW" secondAttribute="trailing" constant="20" id="ceV-xU-gAO"/>
-                            <constraint firstItem="uff-Bi-CEz" firstAttribute="leading" secondItem="dYG-9f-Ia6" secondAttribute="leading" constant="20" id="iJK-El-2y7"/>
-                            <constraint firstAttribute="trailing" secondItem="7fV-zG-SFn" secondAttribute="trailing" constant="72" id="iT0-vi-uWF"/>
-                            <constraint firstItem="uff-Bi-CEz" firstAttribute="top" secondItem="f1i-DN-viR" secondAttribute="bottom" constant="8" id="lyX-fY-Nm1"/>
-                            <constraint firstItem="fhe-jX-0wz" firstAttribute="leading" secondItem="dYG-9f-Ia6" secondAttribute="leading" constant="20" id="mnJ-Mz-fRR"/>
-                            <constraint firstAttribute="trailing" secondItem="7fV-zG-SFn" secondAttribute="trailing" constant="20" id="pm7-1C-z4t"/>
-                            <constraint firstItem="7fV-zG-SFn" firstAttribute="leading" secondItem="dYG-9f-Ia6" secondAttribute="leading" constant="20" id="yKa-4s-hpB"/>
-                            <constraint firstItem="fhe-jX-0wz" firstAttribute="top" secondItem="7fV-zG-SFn" secondAttribute="bottom" constant="8" id="ylB-bc-FzW"/>
-                            <constraint firstItem="7fV-zG-SFn" firstAttribute="top" secondItem="2eP-Jf-Zty" secondAttribute="bottom" constant="8" id="ysm-cE-s6l"/>
+                            <constraint firstAttribute="trailing" secondItem="3pG-tO-c5A" secondAttribute="trailing" id="EQM-me-7E2"/>
+                            <constraint firstItem="Jk1-eK-pBp" firstAttribute="top" secondItem="3pG-tO-c5A" secondAttribute="bottom" id="b1o-Rb-WC4"/>
+                            <constraint firstItem="3pG-tO-c5A" firstAttribute="leading" secondItem="dYG-9f-Ia6" secondAttribute="leading" id="dX6-UN-Bjl"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="pm7-1C-z4t"/>
-                                <exclude reference="yKa-4s-hpB"/>
-                                <exclude reference="ysm-cE-s6l"/>
-                                <exclude reference="ylB-bc-FzW"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="82D-ii-Whq"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
@@ -386,7 +371,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P06-Ob-gxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807" y="49"/>
+            <point key="canvasLocation" x="2010" y="542"/>
         </scene>
         <!--Twitter View Controller-->
         <scene sceneID="DXd-Ah-x3o">
@@ -514,6 +499,5 @@
         <image name="Menu-500" width="500" height="500"/>
         <image name="Search-104" width="104" height="104"/>
         <image name="Twitter-100" width="100" height="100"/>
-        <image name="head-1" width="200" height="200"/>
     </resources>
 </document>

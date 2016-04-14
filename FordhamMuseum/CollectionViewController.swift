@@ -82,7 +82,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         // handle tap events
-        print("You selected cell #\(indexPath.item)!")
+        // print("You selected cell #\(indexPath.item)!")
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,9 +99,14 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         if segue.identifier == "menuSegue"{
             let menu = segue.destinationViewController as! MenuViewController
             menu.delegate = self
-            
-        
         }
+        if segue.identifier == "detailSegue"{
+            let cell = sender as! UICollectionViewCell
+            let indexPath = myCV.indexPathForCell(cell)
+            let detail = segue.destinationViewController as! DetailViewController
+            detail.piece = art![indexPath!.row]
+        }
+        
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
     }
@@ -117,7 +122,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     func apiCall() {
         var api : NSString = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/date^\(endpoint)^any^or/title!descri!covera!date!langua!image/nosort/1024/0/0/0/0/0/json"
         var urlStr : NSString = api.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-        print(urlStr)
+        // print(urlStr)
         var url: NSURL = NSURL(string: urlStr as String)!
         let request = NSURLRequest(
             URL: url,

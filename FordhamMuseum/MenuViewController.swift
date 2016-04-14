@@ -53,9 +53,9 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        print("tapped")
+        // print("tapped")
         self.delegate?.sendValues(endpoints[indexPath.item], spcie: species[indexPath.item])
-        print(species[indexPath.item])
+        // print(species[indexPath.item])
         dismissViewControllerAnimated(true, completion: {})
     }
 

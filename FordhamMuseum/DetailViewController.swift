@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AFNetworking
 
 class DetailViewController: UIViewController {
 
@@ -16,12 +17,26 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var materialHeightLabel: UILabel!
     @IBOutlet weak var collectionCollectionNumberLabel: UILabel!
     @IBOutlet weak var museumLabel: UILabel!
-   
     
+    var piece: NSDictionary?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        print(piece!)
+        
+        detailName.text = piece!["title"] as? String
+        regionDateLabel.text = piece!["date"] as? String
+        materialHeightLabel.text = piece!["langua"] as? String
+        collectionCollectionNumberLabel.text = piece!["covera"] as? String
+        museumLabel.text = piece!["descri"] as? String
+        
+        if let pointer = piece!["pointer"]{
+            let imagePath = "http://libdigcoll2.library.fordham.edu:2012/cgi-bin/getimage.exe?CISOROOT=/Hist&CISOPTR=\(pointer)&DMSCALE=5&DMWIDTH=320&DMHEIGHT=225&DMX=0&DMY=0&DMTEXT=&REC=1&DMTHUMB=1&DMROTATE=0%27"
+            let imageUrl: NSURL = NSURL(string: imagePath as String)!
+            detailImage.setImageWithURL(imageUrl)
+        }
+        
         // Do any additional setup after loading the view.
     }
 
