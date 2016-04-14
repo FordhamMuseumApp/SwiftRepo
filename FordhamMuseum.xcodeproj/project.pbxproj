@@ -16,6 +16,8 @@
 		689D4AB51CB5704C003B453B /* MyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 689D4AB41CB5704C003B453B /* MyCollectionViewCell.swift */; };
 		88BA12FC02422BC86FF9CAB1 /* Pods_FordhamMuseum.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9BC63D4749974A63AAF53E24 /* Pods_FordhamMuseum.framework */; };
 		F93335C81CBDAE0F002CFAF8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F93335C71CBDAE0E002CFAF8 /* SearchViewController.swift */; };
+		F974B62B1CBF244500031DF5 /* AudioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F974B62A1CBF244500031DF5 /* AudioViewController.swift */; };
+		F974B62D1CBF24DE00031DF5 /* AudioTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F974B62C1CBF24DE00031DF5 /* AudioTableViewCell.swift */; };
 		F9AB21F01C9202B300056BF4 /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB21EF1C9202B300056BF4 /* CollectionViewController.swift */; };
 		F9AB21F21C92038900056BF4 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB21F11C92038900056BF4 /* DetailViewController.swift */; };
 		F9AB21F41C92039700056BF4 /* TwitterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AB21F31C92039700056BF4 /* TwitterViewController.swift */; };
@@ -35,6 +37,8 @@
 		9BC63D4749974A63AAF53E24 /* Pods_FordhamMuseum.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FordhamMuseum.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B30249BB15369324A596D2EC /* Pods-FordhamMuseum.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FordhamMuseum.release.xcconfig"; path = "Pods/Target Support Files/Pods-FordhamMuseum/Pods-FordhamMuseum.release.xcconfig"; sourceTree = "<group>"; };
 		F93335C71CBDAE0E002CFAF8 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F974B62A1CBF244500031DF5 /* AudioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioViewController.swift; sourceTree = "<group>"; };
+		F974B62C1CBF24DE00031DF5 /* AudioTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioTableViewCell.swift; sourceTree = "<group>"; };
 		F9AB21EF1C9202B300056BF4 /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
 		F9AB21F11C92038900056BF4 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		F9AB21F31C92039700056BF4 /* TwitterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TwitterViewController.swift; path = ../TwitterViewController.swift; sourceTree = "<group>"; };
@@ -105,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				689D4AB21CB489BD003B453B /* MenuTableViewCell.swift */,
+				F974B62C1CBF24DE00031DF5 /* AudioTableViewCell.swift */,
 				689D4AB41CB5704C003B453B /* MyCollectionViewCell.swift */,
 			);
 			name = Cells;
@@ -118,6 +123,7 @@
 				689D4AB01CB48810003B453B /* MenuViewController.swift */,
 				F93335C71CBDAE0E002CFAF8 /* SearchViewController.swift */,
 				F9AB21F31C92039700056BF4 /* TwitterViewController.swift */,
+				F974B62A1CBF244500031DF5 /* AudioViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -264,8 +270,10 @@
 				F93335C81CBDAE0F002CFAF8 /* SearchViewController.swift in Sources */,
 				689D4AB11CB48810003B453B /* MenuViewController.swift in Sources */,
 				689D4AB31CB489BD003B453B /* MenuTableViewCell.swift in Sources */,
+				F974B62B1CBF244500031DF5 /* AudioViewController.swift in Sources */,
 				686C8DDC1C86837B006DC5D1 /* AppDelegate.swift in Sources */,
 				F9AB21F41C92039700056BF4 /* TwitterViewController.swift in Sources */,
+				F974B62D1CBF24DE00031DF5 /* AudioTableViewCell.swift in Sources */,
 				F9AB21F21C92038900056BF4 /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

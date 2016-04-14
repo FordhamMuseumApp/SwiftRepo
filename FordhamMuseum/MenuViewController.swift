@@ -44,7 +44,6 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier("menuCell", forIndexPath: indexPath) as! MenuTableViewCell
-        cell.selectionStyle = .None
         let title = species[indexPath.item] as! String
         cell.speciesLabel.text = title
        // print(title)
