@@ -11,7 +11,7 @@ import AFNetworking
 
 var window: UIWindow?
 
-class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, MenuViewControllerDelegate{
+class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, MenuViewControllerDelegate, SearchViewControllerDelegate{
     @IBOutlet weak var myCV: UICollectionView!
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var twitterButton: UIBarButtonItem!
@@ -105,6 +105,11 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
             let indexPath = myCV.indexPathForCell(cell)
             let detail = segue.destinationViewController as! DetailViewController
             detail.piece = art![indexPath!.row]
+        }
+        if segue.identifier == "searchSegue"{
+            let search = segue.destinationViewController as! SearchViewController
+            search.delegate = self
+            search.specie = specie
         }
         
         // Get the new view controller using segue.destinationViewController.
