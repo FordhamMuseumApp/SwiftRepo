@@ -27,7 +27,7 @@ class DetailViewController: UIViewController {
         
         detailName.text = piece!["title"] as? String
         regionDateLabel.text = piece!["date"] as? String
-        materialHeightLabel.text = piece!["langua"] as? String
+        materialHeightLabel.text = piece!["cultur"] as? String
         collectionCollectionNumberLabel.text = piece!["covera"] as? String
         museumLabel.text = piece!["descri"] as? String
         

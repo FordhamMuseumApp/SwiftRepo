@@ -15,7 +15,7 @@ protocol MenuViewControllerDelegate {
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var delegate: MenuViewControllerDelegate!
     let species = ["Greek", "Etruscan", "Roman", "Other", "All"]
-    let endpoints = ["greek", "etruscan+etrusco-corinthian", "roman", "babylonian+cypriote+italic+villanovan", "0"]
+    let endpoints = ["greek", "etruscan+etrusco-corinthian", "roman", "babylonian+cypriote+italic+villanovan+byzantine", "0"]
     let images = ["greek", "etruscan", "roman", "lyre", "mosaic"]
 
     @IBOutlet weak var tableView: UITableView!

@@ -15,6 +15,7 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        /* Use this: "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/audioa^,^any^or/title!audio!audioa!date!cultur!image/nosort/1024/0/0/0/0/0/json" to return a dictionary of objects with audio files*/
         
         audioTableView.dataSource = self
         audioTableView.delegate = self
@@ -35,8 +36,8 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier("audioCell", forIndexPath: indexPath) as! AudioTableViewCell
         // cell.selectionStyle = .None
-        let title = "Terracotta Oil Lamp and Satyr Askos"
-        let speaker = "Michael Ceraso"
+        let title = "Kylix (drinking cup with stem)"
+        let speaker = "Emma Cleary"
         cell.titleLabel.text = title
         cell.speakerLabel.text = speaker
         // print(title)

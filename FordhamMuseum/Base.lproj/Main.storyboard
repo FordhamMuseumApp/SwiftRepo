@@ -25,12 +25,6 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Roman Objects" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VcP-nr-gak">
-                                <rect key="frame" x="102" y="229" width="117" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="RFF-b1-TIq">
                                 <rect key="frame" x="0.0" y="109" width="320" height="371"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -42,14 +36,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="wgr-bU-1Tj" customClass="MyCollectionViewCell" customModule="FordhamMuseum" customModuleProvider="target">
-                                        <rect key="frame" x="6" y="6" width="90" height="90"/>
+                                        <rect key="frame" x="80" y="6" width="160" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="90" height="90"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UEl-oQ-Taj">
-                                                    <rect key="frame" x="-3" y="3" width="90" height="90"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UEl-oQ-Taj">
+                                                    <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
                                                 </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -59,6 +53,8 @@
                                             <constraint firstItem="UEl-oQ-Taj" firstAttribute="top" secondItem="wgr-bU-1Tj" secondAttribute="top" id="Vve-EO-1lU"/>
                                             <constraint firstAttribute="trailing" secondItem="UEl-oQ-Taj" secondAttribute="trailing" id="mFB-zg-FHf"/>
                                         </constraints>
+                                        <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="7"/>
+                                        <size key="customSize" width="160" height="120"/>
                                         <connections>
                                             <outlet property="myImage" destination="UEl-oQ-Taj" id="Kc2-iz-Sb6"/>
                                             <segue destination="f8Y-4d-9V5" kind="push" identifier="detailSegue" id="CPr-RL-Ve5"/>
@@ -85,15 +81,12 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1058823529" green="0.2901960784" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="VcP-nr-gak" secondAttribute="trailing" constant="101" id="4Lz-f8-jna"/>
-                            <constraint firstItem="RH5-Fl-iez" firstAttribute="top" secondItem="VcP-nr-gak" secondAttribute="bottom" constant="143" id="6Os-aR-iS3"/>
                             <constraint firstAttribute="trailing" secondItem="RH5-Fl-iez" secondAttribute="trailing" constant="90" id="Tvu-KE-7gk"/>
                             <constraint firstAttribute="trailing" secondItem="RFF-b1-TIq" secondAttribute="trailing" id="VaY-Sf-yuy"/>
                             <constraint firstItem="0jW-W0-85z" firstAttribute="top" secondItem="RH5-Fl-iez" secondAttribute="bottom" constant="8" id="fDm-i5-hbz"/>
                             <constraint firstItem="RFF-b1-TIq" firstAttribute="leading" secondItem="R3t-A9-waj" secondAttribute="leading" id="hEu-Ac-YPw"/>
                             <constraint firstItem="RH5-Fl-iez" firstAttribute="leading" secondItem="R3t-A9-waj" secondAttribute="leading" constant="91" id="iMB-b5-c7f"/>
                             <constraint firstItem="0jW-W0-85z" firstAttribute="top" secondItem="RFF-b1-TIq" secondAttribute="bottom" id="kmA-9S-r1b"/>
-                            <constraint firstItem="VcP-nr-gak" firstAttribute="leading" secondItem="R3t-A9-waj" secondAttribute="leading" constant="102" id="l7M-lz-DNq"/>
                             <constraint firstItem="0jW-W0-85z" firstAttribute="top" secondItem="RFF-b1-TIq" secondAttribute="bottom" id="qQP-hf-qai"/>
                             <constraint firstItem="RFF-b1-TIq" firstAttribute="top" secondItem="7cq-BH-CPb" secondAttribute="bottom" constant="45" id="zlO-ot-odc"/>
                         </constraints>
@@ -204,13 +197,13 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="titleLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBF-tX-cuA">
                                                     <rect key="frame" x="8" y="8" width="312" height="21"/>
                                                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="speakerLabel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JrA-sK-7jw">
                                                     <rect key="frame" x="8" y="34" width="312" height="21"/>
                                                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="17"/>
-                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -253,13 +246,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are you looking for now?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eT8-uf-DPf">
-                                <rect key="frame" x="0.0" y="120" width="320" height="20"/>
+                                <rect key="frame" x="0.0" y="28" width="320" height="20"/>
                                 <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="16"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WAP-NI-Ucx">
-                                <rect key="frame" x="0.0" y="147" width="320" height="44"/>
+                                <rect key="frame" x="0.0" y="48" width="320" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <scopeButtonTitles>
                                     <string>Title</string>
@@ -267,7 +260,7 @@
                                 </scopeButtonTitles>
                             </searchBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8et-gl-9Y7">
-                                <rect key="frame" x="20" y="20" width="48" height="31"/>
+                                <rect key="frame" x="136" y="120" width="48" height="31"/>
                                 <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="15"/>
                                 <state key="normal" title="Cancel">
                                     <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
