@@ -3,7 +3,7 @@
 **The Fordham Museum App** is an app to assist with the navigation and experience of the Fordham University Museum of Greek, Etruscan, and Roman Art.
 
 **Design Features**
-- [ ] User sees Fordham Maroon and Benjamin Moore Blueberry color scheme
+- [x] User sees Fordham Maroon and Benjamin Moore Blueberry color scheme
 - [ ] User sees Auto-layout used throughout
 
 **Next Steps**
@@ -24,13 +24,16 @@
 
 **DetailView**
 - [x] User sees the Detail View includes the image, name, description and, for some artifacts, audio
-- [ ] User sees that data has been parsed
+- [x] User sees that data has been parsed
 
 **SearchView**
-- [ ] User sees Modal Search view controller that allows for search through all artifacts
+- [x] User sees Modal Search view controller that allows for search through all artifacts
 
 **AudioView**
-- [ ] User see Student Objects with transitions to audio files
+- [x] User see Student Objects with transitions to audio files
+- [ ] User can click on Student Object and begin to hear the test audio file
+- [ ] Audio files are recorded
+- [ ] Audio files are uploaded to CONTENTdm (we currently have one uploaded) The remaining will be uploaded on Apr 25th when we get studio time)
 
 **TwitterView**
 - [x] Creation of @FordhamMuseum Twitter
@@ -43,7 +46,7 @@
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/qSxaQkv.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://i.imgur.com/AQrMTjs.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
