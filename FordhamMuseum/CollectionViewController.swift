@@ -73,9 +73,9 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
            // print(imageUrl)
             cell.myImage.setImageWithURL(imageUrl)
         }
-        cell.layer.borderColor = UIColor.blueColor().CGColor
+        cell.layer.borderColor = UIColor.blackColor().CGColor
         cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 8
+        cell.layer.cornerRadius = 7
         cell.backgroundColor = UIColor.grayColor() // make cell more visible in our example project
         
         return cell
@@ -143,6 +143,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         else if(viewType == "menu"){
             api = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or/title!descri!covera!date!cultur!image/nosort/1024/0/0/0/0/0/json"
         }
+        // We also want fields: langua, creato, type, and catelo for the detail view controller. We want to sortby dateed
         
         var urlStr : NSString = api.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         // print(urlStr)
