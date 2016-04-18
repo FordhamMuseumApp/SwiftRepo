@@ -130,6 +130,8 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         /* In order to make the search function more useful use, http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or!title^\(endpoint)^any^or!descri^\(endpoint)^any^or!langua^\(endpoint)^any^or!subjec^\(endpoint)^any^or!creato^\(endpoint)^any^or/title!descri!covera!date!cultur!image/nosort/1024/0/0/0/0/0/json */
         
         var api : NSString = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or/title!descri!covera!date!cultur!image/nosort/1024/0/0/0/0/0/json"
+        // We also want fields: langua, creato, type, and catelo for the detail view controller. We want to sortby dateed
+        
         var urlStr : NSString = api.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         // print(urlStr)
         var url: NSURL = NSURL(string: urlStr as String)!
