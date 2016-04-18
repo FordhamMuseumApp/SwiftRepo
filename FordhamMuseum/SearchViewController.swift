@@ -9,7 +9,7 @@
 import UIKit
 
 protocol SearchViewControllerDelegate {
-    func sendValues (endpnt : NSString, spcie : NSString)
+    func sendValues (endpnt : NSString, spcie : NSString, viewTyp: NSString)
 }
 
 class SearchViewController: UIViewController, UISearchBarDelegate {
@@ -34,9 +34,10 @@ class SearchViewController: UIViewController, UISearchBarDelegate {
     }
     
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        let term = searchBar.text
+        let term = searchBar.text! as String
+        let formattedTerm = term.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
         print(term)
-        self.delegate?.sendValues(term!, spcie: term!)
+        self.delegate?.sendValues(formattedTerm, spcie: formattedTerm, viewTyp: "search")
         // print(species[indexPath.item])
         dismissViewControllerAnimated(true, completion: {})
     }

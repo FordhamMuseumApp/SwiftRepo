@@ -18,6 +18,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var audioButton: UIBarButtonItem!
     @IBOutlet weak var searchLabel: UILabel!
     
+    var viewType: String?
     
     var art:[NSDictionary]?
     
@@ -116,10 +117,11 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         // Pass the selected object to the new view controller.
     }
     
-    func sendValues(endpnt: NSString, spcie: NSString){
+    func sendValues(endpnt: NSString, spcie: NSString, viewTyp: NSString){
         print(endpnt)
         endpoint = endpnt as String
         specie = spcie as String
+        viewType = viewTyp as String
         myCV.reloadData()
         
     }
@@ -129,7 +131,19 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         /* In order to make the search function more useful use, http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or!title^\(endpoint)^any^or!descri^\(endpoint)^any^or!langua^\(endpoint)^any^or!subjec^\(endpoint)^any^or!creato^\(endpoint)^any^or/title!descri!covera!date!cultur!image/nosort/1024/0/0/0/0/0/json */
         
+        //Default
         var api : NSString = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or/title!descri!covera!date!cultur!image/nosort/1024/0/0/0/0/0/json"
+        
+        //Coming from search
+        if (viewType == "search"){
+            api = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or!title^\(endpoint)^any^or!descri^\(endpoint)^any^or!langua^\(endpoint)^any^or!subjec^\(endpoint)^any^or!creato^\(endpoint)^any^or/title!descri!covera!date!cultur!image/nosort/1024/0/0/0/0/0/json"
+        }
+            
+        //coming from menu
+        else if(viewType == "menu"){
+            api = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or/title!descri!covera!date!cultur!image/nosort/1024/0/0/0/0/0/json"
+        }
+        
         var urlStr : NSString = api.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         // print(urlStr)
         var url: NSURL = NSURL(string: urlStr as String)!

@@ -9,7 +9,7 @@
 import UIKit
 
 protocol MenuViewControllerDelegate {
-    func sendValues (endpnt : NSString, spcie : NSString)
+    func sendValues (endpnt : NSString, spcie : NSString, viewTyp: NSString)
 }
 
 class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -54,7 +54,7 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // print("tapped")
-        self.delegate?.sendValues(endpoints[indexPath.item], spcie: species[indexPath.item])
+        self.delegate?.sendValues(endpoints[indexPath.item], spcie: species[indexPath.item], viewTyp: "menu")
         // print(species[indexPath.item])
         dismissViewControllerAnimated(true, completion: {})
     }

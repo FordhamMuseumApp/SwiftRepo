@@ -7,10 +7,22 @@
 //
 
 import UIKit
+import AVFoundation
 
 class AudioViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var audioTableView: UITableView!
+    @IBOutlet weak var currentAudioLabel: UILabel!
+    @IBOutlet weak var playButton: UIButton!
+    
+    let pause = UIImage(named: "Pause-100") as UIImage?
+    let play = UIImage(named: "Play-100") as UIImage?
+    
+    var art:[NSDictionary]?
+    
+    var audioPlayer = AVPlayer()
+    var isPlaying = false
+    var timer:NSTimer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +31,13 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
         
         audioTableView.dataSource = self
         audioTableView.delegate = self
-        
         audioTableView.tableFooterView = UIView(frame: CGRectZero) // limits excess tableview cells
-        // Do any additional setup after loading the view.
+        
+        apiCall()
+        
+        currentAudioLabel.text = "Now Playing: "
+        
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -30,20 +46,98 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
-        return 22
+        if let art = art{
+            //   print(art.count)
+            return art.count
+        } else {
+            return 0
+        }
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier("audioCell", forIndexPath: indexPath) as! AudioTableViewCell
-        // cell.selectionStyle = .None
-        let title = "Kylix (drinking cup with stem)"
-        let speaker = "Emma Cleary"
+        let piece = art![indexPath.row]
+        let title = piece["title"] as! String
+        let speaker = piece["audioa"] as! String
         cell.titleLabel.text = title
         cell.speakerLabel.text = speaker
         // print(title)
         
         return cell
     }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        // print("tapped")
+        let piece = art![indexPath.row]
+        let title = piece["title"] as! String
+        currentAudioLabel.text = title
+        var path = piece["audio"]
+        var urlStr : NSString = path!.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        var url: NSURL = NSURL(string: urlStr as String)!
+        let audio = (url)
+        print(audio)
+        let playerItem = AVPlayerItem(URL: audio)
+        audioPlayer = AVPlayer(playerItem:playerItem)
+        audioPlayer.rate = 1.0
+        if isPlaying {
+            audioPlayer.pause()
+            isPlaying = false
+            playButton.setImage(play, forState: .Normal)
+        } else {
+            audioPlayer.play()
+            isPlaying = true
+            playButton.setImage(pause, forState: .Normal)
+        }
+        
+    }
+    
+    @IBAction func playPressed(sender: AnyObject) {
+        if isPlaying {
+            audioPlayer.pause()
+            isPlaying = false
+            playButton.setImage(play, forState: .Normal)
+        } else {
+            audioPlayer.play()
+            isPlaying = true
+            playButton.setImage(pause, forState: .Normal)
+        }
+    }
+    
+    
+    
+    func apiCall() {
+        
+        //Default
+        var api : NSString = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/audioa^,^any^or/title!audio!audioa!date!cultur!image/nosort/1024/0/0/0/0/0/json"
+        
+        var urlStr : NSString = api.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        // print(urlStr)
+        var url: NSURL = NSURL(string: urlStr as String)!
+        let request = NSURLRequest(
+            URL: url,
+            cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData,
+            timeoutInterval: 10)
+        
+        let session = NSURLSession(
+            configuration: NSURLSessionConfiguration.defaultSessionConfiguration(),
+            delegate: nil,
+            delegateQueue: NSOperationQueue.mainQueue()
+        )
+        
+        let task: NSURLSessionDataTask = session.dataTaskWithRequest(request, completionHandler: { (dataOrNil, response, error) in
+            if let data = dataOrNil {
+                if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(data, options:[]) as? NSDictionary {
+                    self.art = responseDictionary["records"] as! [NSDictionary]
+                    // print(self.art)
+                    self.audioTableView.reloadData()
+                    
+                }
+            }
+        })
+        
+        task.resume()
+    }
+    
     
 
     /*
