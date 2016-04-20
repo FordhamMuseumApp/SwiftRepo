@@ -11,7 +11,7 @@ import AFNetworking
 
 var window: UIWindow?
 
-class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, MenuViewControllerDelegate, SearchViewControllerDelegate{
+class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, MenuViewControllerDelegate, SearchViewControllerDelegate, UISearchBarDelegate{
     @IBOutlet weak var myCV: UICollectionView!
     @IBOutlet weak var searchButton: UIBarButtonItem!
     @IBOutlet weak var twitterButton: UIBarButtonItem!
@@ -19,6 +19,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var searchLabel: UILabel!
     
     var viewType: String?
+    var searchBar = UISearchBar()
     
     var art:[NSDictionary]?
     
@@ -34,6 +35,12 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         myCV.delegate = self
         
         apiCall()
+        
+        
+        searchBar = UISearchBar()
+        searchBar.delegate = self
+        searchBar.sizeToFit()
+        navigationItem.titleView = searchBar
         // Do any additional setup after loading the view.
     }
     
@@ -124,6 +131,14 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         viewType = viewTyp as String
         myCV.reloadData()
         
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        let term = searchBar.text! as String
+        let formattedTerm = term.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        endpoint = formattedTerm
+        viewType = "search"
+        apiCall()
     }
     
     func apiCall() {

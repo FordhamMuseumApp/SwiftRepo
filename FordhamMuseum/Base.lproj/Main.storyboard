@@ -92,32 +92,16 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="EKq-ZM-1NO">
-                        <leftBarButtonItems>
-                            <barButtonItem style="plain" id="MPg-GD-apQ">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mfh-Cc-eh6">
-                                    <rect key="frame" x="16" y="4" width="35" height="35"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" backgroundImage="Menu-500"/>
-                                    <connections>
-                                        <segue destination="iIi-Mb-u2y" kind="presentation" identifier="menuSegue" id="dYV-pe-vva"/>
-                                    </connections>
-                                </button>
-                            </barButtonItem>
-                            <barButtonItem style="plain" id="pOp-3Z-epm">
-                                <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YyK-QY-NUf">
-                                    <rect key="frame" x="59" y="4" width="35" height="35"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <constraints>
-                                        <constraint firstAttribute="height" constant="35" id="93X-PW-W6z"/>
-                                        <constraint firstAttribute="width" constant="35" id="GCb-ny-xmx"/>
-                                    </constraints>
-                                    <state key="normal" image="Search-104"/>
-                                    <connections>
-                                        <segue destination="CqA-YX-5hs" kind="modal" identifier="searchSegue" id="dwV-nh-cws"/>
-                                    </connections>
-                                </button>
-                            </barButtonItem>
-                        </leftBarButtonItems>
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="MPg-GD-apQ">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Mfh-Cc-eh6">
+                                <rect key="frame" x="16" y="4" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" backgroundImage="Menu-500"/>
+                                <connections>
+                                    <segue destination="iIi-Mb-u2y" kind="presentation" identifier="menuSegue" id="dYV-pe-vva"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
                         <rightBarButtonItems>
                             <barButtonItem style="plain" id="mpw-fQ-Fz9">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="TkL-Sy-VVt">
@@ -537,7 +521,6 @@
         <image name="High Volume-100" width="100" height="100"/>
         <image name="Menu-500" width="500" height="500"/>
         <image name="Play-100" width="100" height="100"/>
-        <image name="Search-104" width="104" height="104"/>
         <image name="Twitter-100" width="100" height="100"/>
     </resources>
 </document>
