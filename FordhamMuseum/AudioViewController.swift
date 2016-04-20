@@ -70,7 +70,7 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
         // print("tapped")
         let piece = art![indexPath.row]
         let title = piece["title"] as! String
-        currentAudioLabel.text = title
+        currentAudioLabel.text = "Now Playing: \(title)"
         var path = piece["audio"]
         var urlStr : NSString = path!.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         var url: NSURL = NSURL(string: urlStr as String)!

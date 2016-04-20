@@ -17,6 +17,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var twitterButton: UIBarButtonItem!
     @IBOutlet weak var audioButton: UIBarButtonItem!
     @IBOutlet weak var searchLabel: UILabel!
+    @IBOutlet weak var nonCollectionView: UIView!
     
     var viewType: String?
     var searchBar = UISearchBar()
@@ -40,6 +41,9 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         searchBar.delegate = self
         searchBar.sizeToFit()
         navigationItem.titleView = searchBar
+        searchBar.placeholder = "Search"
+        
+        self.nonCollectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CollectionViewController.dismissKeyboard)))
         // Do any additional setup after loading the view.
     }
     
@@ -49,6 +53,11 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         // Allow for editable label presentation:
         searchLabel.text = "Catalog of Museum Objects: \(specie)"
         
+    }
+    
+    func dismissKeyboard() {
+        searchBar.resignFirstResponder()
+        searchLabel.text = "Catalog of Museum Objects: \(specie)"
     }
     
     // tell the collection view how many cells to make
@@ -127,13 +136,19 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
     }
     
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        searchLabel.text = "Cancel"
+    }
+    
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         let term = searchBar.text! as String
         let formattedTerm = term.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
         endpoint = formattedTerm
+        searchLabel.text = "Catalog of Museum Objects: \(term)"
         specie = term
         viewType = "search"
         apiCall()
+        searchBar.resignFirstResponder()
     }
     
     func apiCall() {
