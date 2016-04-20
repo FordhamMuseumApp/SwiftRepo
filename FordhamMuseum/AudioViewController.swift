@@ -22,7 +22,7 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var audioPlayer = AVPlayer()
     var isPlaying = false
-    var timer:NSTimer!
+    var timer: NSTimer!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,9 +71,9 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
         let piece = art![indexPath.row]
         let title = piece["title"] as! String
         currentAudioLabel.text = "Now Playing: \(title)"
-        var path = piece["audio"]
-        var urlStr : NSString = path!.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
-        var url: NSURL = NSURL(string: urlStr as String)!
+        let path = piece["audio"]
+        let urlStr : NSString = path!.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        let url: NSURL = NSURL(string: urlStr as String)!
         let audio = (url)
         print(audio)
         let playerItem = AVPlayerItem(URL: audio)
@@ -108,11 +108,11 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
     func apiCall() {
         
         //Default
-        var api : NSString = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/audioa^,^any^or/title!audio!audioa!date!cultur!image/nosort/1024/0/0/0/0/0/json"
+        let api : NSString = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/audioa^,^any^or/title!audio!audioa!date!cultur!image/nosort/1024/0/0/0/0/0/json"
         
-        var urlStr : NSString = api.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        let urlStr : NSString = api.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         // print(urlStr)
-        var url: NSURL = NSURL(string: urlStr as String)!
+        let url: NSURL = NSURL(string: urlStr as String)!
         let request = NSURLRequest(
             URL: url,
             cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData,
@@ -127,7 +127,7 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
         let task: NSURLSessionDataTask = session.dataTaskWithRequest(request, completionHandler: { (dataOrNil, response, error) in
             if let data = dataOrNil {
                 if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(data, options:[]) as? NSDictionary {
-                    self.art = responseDictionary["records"] as! [NSDictionary]
+                    self.art = responseDictionary["records"] as? [NSDictionary]
                     // print(self.art)
                     self.audioTableView.reloadData()
                     

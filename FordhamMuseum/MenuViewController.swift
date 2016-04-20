@@ -44,10 +44,10 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier("menuCell", forIndexPath: indexPath) as! MenuTableViewCell
-        let title = species[indexPath.item] as! String
+        let title = species[indexPath.item] 
         cell.speciesLabel.text = title
        // print(title)
-        cell.speciesImage.image = UIImage(named: images[indexPath.item] as! String)
+        cell.speciesImage.image = UIImage(named: images[indexPath.item])
         
         return cell
     }

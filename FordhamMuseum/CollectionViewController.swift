@@ -77,8 +77,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MyCollectionViewCell
         
         let piece = art![indexPath.row]
-        let title = piece["title"] as! String
-       // print(title)
         
         // Use the outlet in our custom class to get a reference to the UILabel in the cell
         if let pointer=piece["pointer"]{
@@ -170,9 +168,9 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         }
         // We also want fields: langua, creato, type, and catelo for the detail view controller. We want to sortby dateed
         
-        var urlStr : NSString = api.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+        let urlStr : NSString = api.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         // print(urlStr)
-        var url: NSURL = NSURL(string: urlStr as String)!
+        let url: NSURL = NSURL(string: urlStr as String)!
         let request = NSURLRequest(
             URL: url,
             cachePolicy: NSURLRequestCachePolicy.ReloadIgnoringLocalCacheData,
@@ -187,7 +185,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         let task: NSURLSessionDataTask = session.dataTaskWithRequest(request, completionHandler: { (dataOrNil, response, error) in
             if let data = dataOrNil {
                 if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(data, options:[]) as? NSDictionary {
-                    self.art = responseDictionary["records"] as! [NSDictionary]
+                    self.art = responseDictionary["records"] as? [NSDictionary]
                     // print(self.art)
                     self.myCV.reloadData()
                                                                                 
