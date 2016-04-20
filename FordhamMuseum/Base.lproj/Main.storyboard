@@ -247,62 +247,6 @@
             </objects>
             <point key="canvasLocation" x="2240" y="-55"/>
         </scene>
-        <!--Search View Controller-->
-        <scene sceneID="jNB-ak-ccH">
-            <objects>
-                <viewController id="CqA-YX-5hs" customClass="SearchViewController" customModule="FordhamMuseum" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6Kx-F7-LKb"/>
-                        <viewControllerLayoutGuide type="bottom" id="Eak-kj-pkP"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="tR6-p9-JB6">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="You previously searched:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RyB-VG-ghE">
-                                <rect key="frame" x="0.0" y="92" width="320" height="20"/>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="16"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What are you looking for now?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eT8-uf-DPf">
-                                <rect key="frame" x="0.0" y="28" width="320" height="20"/>
-                                <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="16"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WAP-NI-Ucx">
-                                <rect key="frame" x="0.0" y="48" width="320" height="44"/>
-                                <textInputTraits key="textInputTraits"/>
-                                <scopeButtonTitles>
-                                    <string>Title</string>
-                                    <string>Title</string>
-                                </scopeButtonTitles>
-                            </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8et-gl-9Y7">
-                                <rect key="frame" x="136" y="120" width="48" height="31"/>
-                                <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="15"/>
-                                <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelButtonPress:" destination="CqA-YX-5hs" eventType="touchUpInside" id="XUX-hU-n8C"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" red="0.1058823529" green="0.2901960784" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="M5B-k5-peq"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="previousLabel" destination="RyB-VG-ghE" id="Q3y-3F-Bww"/>
-                        <outlet property="searchBar" destination="WAP-NI-Ucx" id="LJ0-se-FxR"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nc6-aW-Cbt" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1390" y="-55"/>
-        </scene>
         <!--Detail View Controller-->
         <scene sceneID="kcn-JU-rgw">
             <objects>
