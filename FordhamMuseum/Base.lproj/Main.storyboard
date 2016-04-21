@@ -98,7 +98,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Menu-500"/>
                                 <connections>
-                                    <segue destination="iIi-Mb-u2y" kind="presentation" identifier="menuSegue" id="dYV-pe-vva"/>
+                                    <segue destination="iIi-Mb-u2y" kind="popoverPresentation" identifier="menuSegue" popoverAnchorView="Mfh-Cc-eh6" id="dYV-pe-vva">
+                                        <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -135,6 +137,7 @@
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="menuButton" destination="MPg-GD-apQ" id="gCE-Vl-i60"/>
                         <outlet property="myCV" destination="RFF-b1-TIq" id="YOe-s6-o4O"/>
                         <outlet property="nonCollectionView" destination="6IE-g8-Am6" id="BCi-9s-NWU"/>
                         <outlet property="searchLabel" destination="ifO-uU-04V" id="h2b-9Q-g5Q"/>
@@ -383,29 +386,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Utv-Vd-kxO">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Utv-Vd-kxO">
+                                <rect key="frame" x="0.0" y="0.0" width="200" height="264"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="3Y5-Ps-Ais">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                <color key="sectionIndexBackgroundColor" red="0.43529411759999997" green="0.4431372549" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="K86-Tx-a6h">
+                                    <rect key="frame" x="0.0" y="0.0" width="200" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Culture Guide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NTq-hl-Qze">
+                                            <rect key="frame" x="8" y="10" width="127" height="24"/>
+                                            <fontDescription key="fontDescription" name="Didot-Bold" family="Didot" pointSize="19"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" red="0.1058823529" green="0.2901960784" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="NTq-hl-Qze" firstAttribute="leading" secondItem="K86-Tx-a6h" secondAttribute="leading" constant="8" id="Fb6-uU-Kmw"/>
+                                        <constraint firstAttribute="bottom" secondItem="NTq-hl-Qze" secondAttribute="bottom" constant="10" id="Qaa-UL-C0W"/>
+                                        <constraint firstItem="NTq-hl-Qze" firstAttribute="top" secondItem="K86-Tx-a6h" secondAttribute="top" constant="10" id="Zf7-Zp-8L0"/>
+                                    </constraints>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" rowHeight="44" id="VlR-Dl-Y7M" customClass="MenuTableViewCell" customModule="FordhamMuseum" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="48" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="72" width="200" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VlR-Dl-Y7M" id="Cqx-2J-zKW">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Species of Art" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ABf-BU-Ygd">
-                                                    <rect key="frame" x="8" y="10" width="183" height="24"/>
+                                                    <rect key="frame" x="8" y="8" width="121" height="25"/>
                                                     <fontDescription key="fontDescription" name="Didot" family="Didot" pointSize="19"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.1058823529" green="0.2901960784" blue="0.4823529412" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="DHT-Au-aw5">
-                                                    <rect key="frame" x="270" y="2" width="40" height="40"/>
+                                                    <rect key="frame" x="152" y="2" width="40" height="40"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="DHT-Au-aw5" secondAttribute="height" multiplier="61:60" id="1p9-GU-pvS"/>
                                                     </constraints>
@@ -413,12 +431,24 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="DHT-Au-aw5" secondAttribute="bottom" constant="1" id="47r-WG-mrP"/>
+                                                <constraint firstAttribute="trailing" secondItem="DHT-Au-aw5" secondAttribute="trailing" constant="8" id="4cS-OL-ZwA"/>
                                                 <constraint firstItem="DHT-Au-aw5" firstAttribute="top" secondItem="Cqx-2J-zKW" secondAttribute="top" constant="2" id="7gL-v1-HoW"/>
-                                                <constraint firstItem="ABf-BU-Ygd" firstAttribute="top" secondItem="Cqx-2J-zKW" secondAttribute="top" constant="10" id="E6X-8z-hhb"/>
+                                                <constraint firstItem="ABf-BU-Ygd" firstAttribute="top" secondItem="Cqx-2J-zKW" secondAttribute="top" constant="8" id="E6X-8z-hhb"/>
                                                 <constraint firstItem="DHT-Au-aw5" firstAttribute="leading" secondItem="ABf-BU-Ygd" secondAttribute="trailing" constant="79" id="WHz-e9-QR5"/>
                                                 <constraint firstItem="ABf-BU-Ygd" firstAttribute="leading" secondItem="Cqx-2J-zKW" secondAttribute="leading" constant="8" id="b4O-61-SZr"/>
+                                                <constraint firstAttribute="bottom" secondItem="ABf-BU-Ygd" secondAttribute="bottom" constant="10" id="fjo-Ed-2Yz"/>
+                                                <constraint firstItem="DHT-Au-aw5" firstAttribute="leading" secondItem="ABf-BU-Ygd" secondAttribute="trailing" constant="16" id="qyr-Mr-7pG"/>
                                                 <constraint firstAttribute="trailing" secondItem="DHT-Au-aw5" secondAttribute="trailing" constant="10" id="tWq-QK-hYg"/>
+                                                <constraint firstAttribute="trailing" secondItem="DHT-Au-aw5" secondAttribute="trailing" constant="32" id="xx1-zD-evy"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="constraints">
+                                                    <exclude reference="WHz-e9-QR5"/>
+                                                    <exclude reference="qyr-Mr-7pG"/>
+                                                    <exclude reference="tWq-QK-hYg"/>
+                                                    <exclude reference="xx1-zD-evy"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration">
                                             <accessibilityTraits key="traits" selected="YES"/>
@@ -431,7 +461,6 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="o5H-Ef-E8K"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

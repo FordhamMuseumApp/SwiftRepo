@@ -11,9 +11,10 @@ import AFNetworking
 
 var window: UIWindow?
 
-class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, MenuViewControllerDelegate, UISearchBarDelegate{
+class CollectionViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, MenuViewControllerDelegate, UISearchBarDelegate, UIPopoverPresentationControllerDelegate{
     @IBOutlet weak var myCV: UICollectionView!
     @IBOutlet weak var searchButton: UIBarButtonItem!
+    @IBOutlet weak var menuButton: UIBarButtonItem!
     @IBOutlet weak var twitterButton: UIBarButtonItem!
     @IBOutlet weak var audioButton: UIBarButtonItem!
     @IBOutlet weak var searchLabel: UILabel!
@@ -112,7 +113,18 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "menuSegue"{
             let menu = segue.destinationViewController as! MenuViewController
-            menu.delegate = self
+            
+            // Set up the popover presentation
+            let controller = menu.popoverPresentationController
+            if controller != nil {
+                controller?.delegate = self
+                controller?.barButtonItem = menuButton
+                menu.delegate = self
+                menu.preferredContentSize = CGSizeMake(200, 264)
+                //menu.tableView.borderColor = UIColor.blackColor().CGColor
+                //menu.tableView.borderWidth = 1
+            }
+            // menu.delegate = self
         }
         if segue.identifier == "detailSegue"{
             let cell = sender as! UICollectionViewCell
@@ -125,13 +137,20 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         // Pass the selected object to the new view controller.
     }
     
+    func adaptivePresentationStyleForPresentationController(controller: UIPresentationController) -> UIModalPresentationStyle {
+        // Set up the popover presentation
+        
+        return .None
+    }
+    
     func sendValues(endpnt: NSString, spcie: NSString, viewTyp: NSString){
         print(endpnt)
         endpoint = endpnt as String
         specie = spcie as String
         viewType = viewTyp as String
+        apiCall()
+        searchLabel.text = "Catalog of Museum Objects: \(specie)"
         myCV.reloadData()
-        
     }
     
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
