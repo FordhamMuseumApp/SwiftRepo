@@ -6,8 +6,8 @@ use_frameworks!
 target 'FordhamMuseum' do
 	pod 'AFNetworking'
 	pod 'BDBOAuth1Manager'
-    pod 'Fabric'
-    pod 'TwitterKit'
-    pod 'TwitterCore'
+	pod 'Fabric'
+	pod 'TwitterKit'
+	pod 'TwitterCore'
 end
 

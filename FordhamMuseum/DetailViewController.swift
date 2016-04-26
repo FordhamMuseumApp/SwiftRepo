@@ -31,10 +31,6 @@ class DetailViewController: UIViewController {
         
         contentView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.7)
         contentView.layer.cornerRadius = 20
-
-        let contentwidth = scrollView.bounds.width
-        let contentheight = scrollView.bounds.height
-        scrollView.contentSize = CGSizeMake(contentwidth, contentheight)
         
         print(piece!)
         
@@ -53,7 +49,7 @@ class DetailViewController: UIViewController {
         museumLabel.preferredMaxLayoutWidth = museumLabel.frame.size.width
         
         if let pointer = piece!["pointer"]{
-            let imagePath = "http://libdigcoll2.library.fordham.edu:2012/cgi-bin/getimage.exe?CISOROOT=/Hist&CISOPTR=\(pointer)&DMSCALE=5&DMWIDTH=320&DMHEIGHT=225&DMX=0&DMY=0&DMTEXT=&REC=1&DMTHUMB=1&DMROTATE=0%27"
+            let imagePath = "http://libdigcoll2.library.fordham.edu/utils/getthumbnail/collection/Hist/id/\(pointer)"
             let imageUrl: NSURL = NSURL(string: imagePath as String)!
             detailImage.setImageWithURL(imageUrl)
         }
