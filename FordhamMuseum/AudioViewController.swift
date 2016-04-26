@@ -38,6 +38,7 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
         currentAudioLabel.text = "Now Playing: "
         
         
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,8 +60,10 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
         let piece = art![indexPath.row]
         let title = piece["title"] as! String
         let speaker = piece["audioa"] as! String
+        let number = piece["audiob"] as! String
         cell.titleLabel.text = title
         cell.speakerLabel.text = speaker
+        cell.numberLabel.text = number
         // print(title)
         
         return cell
@@ -108,7 +111,7 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
     func apiCall() {
         
         //Default
-        let api : NSString = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/audioa^,^any^or/title!audio!audioa!date!cultur!image/nosort/1024/0/0/0/0/0/json"
+        let api : NSString = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/audioa^,^any^or/title!audio!audioa!audiob!cultur!image/audiob/1024/0/0/0/0/0/json"
         
         let urlStr : NSString = api.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         // print(urlStr)

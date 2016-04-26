@@ -16,6 +16,5 @@ class TwitterViewController: TWTRTimelineViewController {
         
         let client = TWTRAPIClient()
         self.dataSource = TWTRUserTimelineDataSource(screenName: "FordhamMuseum", APIClient: client)
-        
     }
 }

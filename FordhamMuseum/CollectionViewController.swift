@@ -45,6 +45,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         self.nonCollectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CollectionViewController.dismissKeyboard)))
         // Do any additional setup after loading the view.
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -72,6 +73,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     
     // make a cell for each cell index path
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+   
         
         // get a reference to our storyboard cell
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! MyCollectionViewCell
@@ -82,15 +84,32 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         if let pointer=piece["pointer"]{
             //print(pointer)
             let imagePath = "http://libdigcoll2.library.fordham.edu/utils/getthumbnail/collection/Hist/id/\(pointer)"
-            let imageUrl: NSURL = NSURL(string: imagePath as String)!
+            let imageUrl = NSURL(string: imagePath as String)!
            // print(imageUrl)
             cell.myImage.setImageWithURL(imageUrl)
         }
+    
+        
         cell.layer.borderColor = UIColor.blackColor().CGColor
         cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 7
-        cell.backgroundColor = UIColor.grayColor() // make cell more visible in our example project
+        cell.layer.cornerRadius = 20
+        cell.backgroundColor = UIColor.grayColor().colorWithAlphaComponent(0.5) // make cell more visible in our example project
         
+        // Code trying to make shadows
+            
+        /* let shadowLayer = CAShapeLayer()
+        
+        shadowLayer.path = UIBezierPath(roundedRect: cell.bounds, cornerRadius: 7).CGPath
+        shadowLayer.fillColor = UIColor.whiteColor().CGColor
+                
+        shadowLayer.shadowColor = UIColor.blackColor().CGColor
+        shadowLayer.shadowPath = shadowLayer.path
+        shadowLayer.shadowOffset = CGSize(width: 2.0, height: 2.0)
+        shadowLayer.shadowOpacity = 0.8
+        shadowLayer.shadowRadius = 2
+                
+        cell.layer.insertSublayer(shadowLayer, atIndex: 0)
+*/
         return cell
     }
     
@@ -155,16 +174,16 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         /* In order to make the search function more useful use, http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or!title^\(endpoint)^any^or!descri^\(endpoint)^any^or!langua^\(endpoint)^any^or!subjec^\(endpoint)^any^or!creato^\(endpoint)^any^or/title!descri!covera!date!cultur!image/nosort/1024/0/0/0/0/0/json */
         
         //Default
-        var api : NSString = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or/title!descri!covera!date!cultur!image/dateed/1024/0/0/0/0/0/json"
+        var api : NSString = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or/title!descri!langua!date!cultur!image/dateed/1024/0/0/0/0/0/json"
         
         //Coming from search
         if (viewType == "search"){
-            api = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or!title^\(endpoint)^any^or!descri^\(endpoint)^any^or!langua^\(endpoint)^any^or!subjec^\(endpoint)^any^or!creato^\(endpoint)^any^or/title!descri!covera!date!cultur!image/dateed/1024/0/0/0/0/0/json"
+            api = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or!title^\(endpoint)^any^or!descri^\(endpoint)^any^or!langua^\(endpoint)^any^or!subjec^\(endpoint)^any^or!creato^\(endpoint)^any^or/title!descri!langua!date!cultur!image/dateed/1024/0/0/0/0/0/json"
         }
             
         //coming from menu
         else if(viewType == "menu"){
-            api = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or/title!descri!covera!date!cultur!image/dateed/1024/0/0/0/0/0/json"
+            api = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or/title!descri!langua!date!cultur!image/dateed/1024/0/0/0/0/0/json"
         }
         // We also want fields: langua, creato, type, and catelo for the detail view controller. We want to sortby dateed
         
