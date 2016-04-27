@@ -17,7 +17,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var twitterButton: UIBarButtonItem!
     @IBOutlet weak var audioButton: UIBarButtonItem!
     @IBOutlet weak var searchLabel: UILabel!
-    @IBOutlet weak var nonCollectionView: UIView!
+    @IBOutlet weak var cancelButton: UIButton!
     
     var viewType: String?
     var searchBar = UISearchBar()
@@ -37,13 +37,14 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         apiCall()
         
+        cancelButton.hidden = true
+        
         searchBar = UISearchBar()
         searchBar.delegate = self
         searchBar.sizeToFit()
         navigationItem.titleView = searchBar
         searchBar.placeholder = "Search"
         
-        self.nonCollectionView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(CollectionViewController.dismissKeyboard)))
         // Do any additional setup after loading the view.
         
     }
@@ -56,9 +57,31 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
     }
     
-    func dismissKeyboard() {
+    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
+        cancelButton.hidden = false
+        searchLabel.hidden = true
+        
+        //searchLabel.text = "Cancel"
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        let term = searchBar.text! as String
+        let formattedTerm = term.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        endpoint = formattedTerm
+        searchLabel.hidden = false
+        cancelButton.hidden = true
+        searchLabel.text = "Catalog of Museum Objects: \(term)"
+        specie = term
+        viewType = "search"
+        apiCall()
         searchBar.resignFirstResponder()
-        searchLabel.text = "Catalog of Museum Objects: \(specie)"
+    }
+    
+    @IBAction func onCancel(sender: AnyObject) {
+        searchBar.resignFirstResponder()
+        cancelButton.hidden = true
+        searchLabel.hidden = false
+        
     }
     
     // tell the collection view how many cells to make
@@ -151,21 +174,6 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         viewType = viewTyp as String
         myCV.reloadData()
         
-    }
-    
-    func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
-        searchLabel.text = "Cancel"
-    }
-    
-    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
-        let term = searchBar.text! as String
-        let formattedTerm = term.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        endpoint = formattedTerm
-        searchLabel.text = "Catalog of Museum Objects: \(term)"
-        specie = term
-        viewType = "search"
-        apiCall()
-        searchBar.resignFirstResponder()
     }
     
     func apiCall() {
