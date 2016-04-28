@@ -567,7 +567,21 @@
                             <outlet property="delegate" destination="CIu-hf-nP2" id="fUP-sf-flX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="7A7-Mg-lqR"/>
+                    <navigationItem key="navigationItem" id="7A7-Mg-lqR">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="T9k-sw-bUh">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="muw-qO-03P">
+                                <rect key="frame" x="254" y="4" width="50" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" title="Tweet">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="onComposeButton:" destination="CIu-hf-nP2" eventType="touchUpInside" id="Znx-N3-yAY"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcN-Ej-KsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

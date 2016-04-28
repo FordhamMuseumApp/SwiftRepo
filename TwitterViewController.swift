@@ -16,5 +16,23 @@ class TwitterViewController: TWTRTimelineViewController {
         
         let client = TWTRAPIClient()
         self.dataSource = TWTRUserTimelineDataSource(screenName: "FordhamMuseum", APIClient: client)
+        self.showTweetActions = true
+    }
+    
+    @IBAction func onComposeButton(sender: AnyObject) {
+        // Swift
+        let composer = TWTRComposer()
+        
+        composer.setText("@FordhamMuseum")
+        
+        // Called from a UIViewController
+        composer.showFromViewController(self) {result in
+            if (result == TWTRComposerResult.Cancelled) {
+                print("Tweet composition cancelled")
+            }
+            else {
+                print("Sending tweet!")
+            }
+        }
     }
 }
