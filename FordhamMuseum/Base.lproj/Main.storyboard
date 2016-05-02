@@ -260,9 +260,6 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rck-wd-YP8">
-                                <rect key="frame" x="0.0" y="400" width="320" height="120"/>
-                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="Li8-fX-rL5" firstAttribute="leading" secondItem="8EY-yh-yeL" secondAttribute="leading" id="6kv-Ks-4gb"/>
@@ -282,7 +279,6 @@
                     <connections>
                         <outlet property="audioTableView" destination="kfC-x0-xcV" id="Tb3-PZ-Mj2"/>
                         <outlet property="currentAudioLabel" destination="usy-82-4gF" id="jQx-rR-jTE"/>
-                        <outlet property="imageView" destination="Rck-wd-YP8" id="gAh-1y-G1A"/>
                         <outlet property="playButton" destination="MFL-Rd-Q1S" id="cx5-AN-Kqm"/>
                     </connections>
                 </viewController>
