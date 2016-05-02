@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 import AFNetworking
 
 class DetailViewController: UIViewController {
@@ -21,13 +22,27 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var cateloLabel: UILabel!
     @IBOutlet weak var languaLabel: UILabel!
+    @IBOutlet weak var audioButton: UIButton!
     
     var piece: NSDictionary?
+    var aUrl: String?
+    var isAudio = false
+    
+    
+    var audioPlayer = AVPlayer()
+    var isPlaying = false
+    
+    let pause = UIImage(named: "Pause-100") as UIImage?
+    let play = UIImage(named: "Play-100") as UIImage?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        audioButton.hidden = true
+        
         self.apiCall()
+        
         
         contentView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.7)
         contentView.layer.cornerRadius = 20
@@ -55,6 +70,22 @@ class DetailViewController: UIViewController {
         }
         
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func onAudio(sender: AnyObject) {
+        if isPlaying {
+            audioPlayer.pause()
+            isPlaying = false
+            self.audioButton.setImage(play, forState: .Normal)
+        } else {
+            audioPlayer.play()
+            isPlaying = true
+            self.audioButton.setImage(pause, forState: .Normal)
+        }
+
+        
+        
+        
     }
     
     func apiCall() {
@@ -87,6 +118,24 @@ class DetailViewController: UIViewController {
                     print(self.piece)
                     self.cateloLabel.text = self.piece!["catelo"] as? String
                     self.languaLabel.text = ""
+                    if let audioUrl = self.piece!["audio"] as? String {
+                        print("audioset")
+                        self.isAudio = true
+                       
+                        self.aUrl = audioUrl
+                        
+                        self.audioButton.hidden = false
+                        let path = self.aUrl
+                        let urlStr : NSString = path!.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+                        let url: NSURL = NSURL(string: urlStr as String)!
+                        let audio = (url)
+                        print(audio)
+                        let playerItem = AVPlayerItem(URL: audio)
+                        self.audioPlayer = AVPlayer(playerItem:playerItem)
+                        self.audioPlayer.rate = 1.0
+                        self.audioPlayer.pause()
+                        
+                    }
                 }
             }
         })

@@ -529,9 +529,21 @@
                             </mask>
                         </variation>
                     </view>
-                    <navigationItem key="navigationItem" id="82D-ii-Whq"/>
+                    <navigationItem key="navigationItem" id="82D-ii-Whq">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="c2z-tO-gS2">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jk6-dd-G9h">
+                                <rect key="frame" x="269" y="4" width="35" height="35"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="High Volume-100"/>
+                                <connections>
+                                    <action selector="onAudio:" destination="f8Y-4d-9V5" eventType="touchUpInside" id="0T4-mS-48D"/>
+                                </connections>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="audioButton" destination="jk6-dd-G9h" id="czJ-Xx-UUC"/>
                         <outlet property="cateloLabel" destination="bsX-EI-KfK" id="we2-el-Krk"/>
                         <outlet property="collectionCollectionNumberLabel" destination="rW7-rg-tkr" id="745-sN-Vij"/>
                         <outlet property="contentView" destination="3pG-tO-c5A" id="RIp-pM-k3d"/>
