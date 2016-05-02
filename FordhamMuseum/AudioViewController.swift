@@ -14,12 +14,13 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
     @IBOutlet weak var audioTableView: UITableView!
     @IBOutlet weak var currentAudioLabel: UILabel!
     @IBOutlet weak var playButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
     
     let pause = UIImage(named: "Pause-100") as UIImage?
     let play = UIImage(named: "Play-100") as UIImage?
     
     var art:[NSDictionary]?
-    
+        
     var audioPlayer = AVPlayer()
     var isPlaying = false
     var timer: NSTimer!
@@ -33,11 +34,16 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
         audioTableView.delegate = self
         audioTableView.tableFooterView = UIView(frame: CGRectZero) // limits excess tableview cells
         
+        //imageView.layer.borderColor = UIColor.blackColor().CGColor
+        //imageView.layer.borderWidth = 5
+        //imageView.layer.cornerRadius = 20
+        //imageView.clipsToBounds = true
+        
+        imageView.alpha = 0.0
+        
         apiCall()
         
         currentAudioLabel.text = "Now Playing: "
-        
-        
         
     }
 
@@ -61,6 +67,7 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
         let title = piece["title"] as! String
         let speaker = piece["audioa"] as! String
         let number = piece["audiob"] as! String
+        
         cell.titleLabel.text = title
         cell.speakerLabel.text = speaker
         cell.numberLabel.text = number
@@ -72,25 +79,41 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         // print("tapped")
         let piece = art![indexPath.row]
-        let title = piece["title"] as! String
-        currentAudioLabel.text = "Now Playing: \(title)"
+        let speaker = piece["audioa"] as! String
+        currentAudioLabel.text = "Now Playing: \(speaker)"
         let path = piece["audio"]
         let urlStr : NSString = path!.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
         let url: NSURL = NSURL(string: urlStr as String)!
         let audio = (url)
         print(audio)
+        
         let playerItem = AVPlayerItem(URL: audio)
         audioPlayer = AVPlayer(playerItem:playerItem)
         audioPlayer.rate = 1.0
-        if isPlaying {
-            audioPlayer.pause()
-            isPlaying = false
-            playButton.setImage(play, forState: .Normal)
-        } else {
+        
+        if let pointer = piece["pointer"]{
+            let imagePath = "http://libdigcoll2.library.fordham.edu/utils/getthumbnail/collection/Hist/id/\(pointer)"
+            let imageUrl: NSURL = NSURL(string: imagePath as String)!
+            //imageView.frame.size.width = (imageView.image?.size.width)!
+            //imageView.frame.size.height = (imageView.image?.size.height)!
+            
+            UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {self.imageView.alpha = 0.0
+                self.imageView.alpha = 0.0
+                }, completion: {(finished:Bool) in
+                    self.imageView.setImageWithURL(imageUrl)
+                    UIView.animateWithDuration(1.0, delay: 0.5, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                        self.imageView.alpha = 1.0
+                        }, completion: nil)
+            })
+        }
             audioPlayer.play()
             isPlaying = true
             playButton.setImage(pause, forState: .Normal)
-        }
+        
+        
+        
+        
+        
         
     }
     
@@ -99,10 +122,16 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
             audioPlayer.pause()
             isPlaying = false
             playButton.setImage(play, forState: .Normal)
+            UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {self.imageView.alpha = 0.0
+                self.imageView.alpha = 0.0
+                }, completion: nil)
         } else {
             audioPlayer.play()
             isPlaying = true
             playButton.setImage(pause, forState: .Normal)
+            UIView.animateWithDuration(1.0, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                self.imageView.alpha = 1.0
+                  }, completion: nil)
         }
     }
     
@@ -131,7 +160,8 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
             if let data = dataOrNil {
                 if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(data, options:[]) as? NSDictionary {
                     self.art = responseDictionary["records"] as? [NSDictionary]
-                    // print(self.art)
+                    var descriptor: NSSortDescriptor = NSSortDescriptor(key: "audiob", ascending: true)
+                    self.art = responseDictionary["records"]?.sortedArrayUsingDescriptors([descriptor]) as? [NSDictionary]
                     self.audioTableView.reloadData()
                     
                 }

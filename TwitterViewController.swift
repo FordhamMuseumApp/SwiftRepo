@@ -23,7 +23,7 @@ class TwitterViewController: TWTRTimelineViewController {
         // Swift
         let composer = TWTRComposer()
         
-        composer.setText("@FordhamMuseum")
+        composer.setText("Hey @FordhamMuseum! ")
         
         // Called from a UIViewController
         composer.showFromViewController(self) {result in
