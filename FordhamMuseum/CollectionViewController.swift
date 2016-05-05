@@ -72,7 +72,12 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         cancelButton.hidden = true
         searchLabel.text = "Catalog of Museum Objects: \(term)"
         specie = term
-        viewType = "search"
+        if term == "Audio"{
+            viewType = "Audio"
+        }
+        else{
+            viewType = "search"
+        }
         apiCall()
         searchBar.resignFirstResponder()
     }
@@ -189,6 +194,11 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
             api = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or!title^\(endpoint)^any^or!descri^\(endpoint)^any^or!langua^\(endpoint)^any^or!subjec^\(endpoint)^any^or!creato^\(endpoint)^any^or/title!descri!langua!date!cultur!image/dateed/1024/0/0/0/0/0/json"
         }
             
+        //Audio Shortcut
+        else if(viewType == "Audio"){
+            api = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/audioa^,^any^or/title!audio!audioa!audiob!cultur!image/audiob/1024/0/0/0/0/0/json"
+        }
+            
         //coming from menu
         else if(viewType == "menu"){
             api = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or/title!descri!langua!date!cultur!image/dateed/1024/0/0/0/0/0/json"
@@ -214,6 +224,10 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
                 if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(data, options:[]) as? NSDictionary {
                     self.art = responseDictionary["records"] as? [NSDictionary]
                     // print(self.art)
+                    if self.viewType == "Audio"{
+                        let descriptor: NSSortDescriptor = NSSortDescriptor(key: "audiob", ascending: true)
+                        self.art = responseDictionary["records"]?.sortedArrayUsingDescriptors([descriptor]) as? [NSDictionary]
+                    }
                     self.myCV.reloadData()
                                                                                 
                 }

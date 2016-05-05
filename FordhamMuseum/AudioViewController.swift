@@ -131,7 +131,7 @@ class AudioViewController: UIViewController, UITableViewDataSource, UITableViewD
             if let data = dataOrNil {
                 if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(data, options:[]) as? NSDictionary {
                     self.art = responseDictionary["records"] as? [NSDictionary]
-                    var descriptor: NSSortDescriptor = NSSortDescriptor(key: "audiob", ascending: true)
+                    let descriptor: NSSortDescriptor = NSSortDescriptor(key: "audiob", ascending: true)
                     self.art = responseDictionary["records"]?.sortedArrayUsingDescriptors([descriptor]) as? [NSDictionary]
                     self.audioTableView.reloadData()
                     
