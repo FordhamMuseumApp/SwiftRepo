@@ -48,10 +48,23 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         // Do any additional setup after loading the view.
         
     }
-    
-    override func viewDidAppear(animated: Bool) {
+    override func didMoveToParentViewController(parent: UIViewController?) {
+        if let myLoadedString = NSUserDefaults.standardUserDefaults().stringForKey("endpoint") {
+            endpoint = myLoadedString
+            specie = myLoadedString
+        }
         apiCall()
-        
+        myCV.reloadData()
+        // Allow for editable label presentation:
+        searchLabel.text = "Catalog of Museum Objects: \(specie)"
+    }
+    override func viewDidAppear(animated: Bool) {
+        if let myLoadedString = NSUserDefaults.standardUserDefaults().stringForKey("endpoint") {
+           endpoint = myLoadedString
+            specie = myLoadedString
+        }
+        apiCall()
+        myCV.reloadData()
         // Allow for editable label presentation:
         searchLabel.text = "Catalog of Museum Objects: \(specie)"
         
@@ -158,8 +171,9 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "menuSegue"{
-            let menu = segue.destinationViewController as! MenuViewController
+            let menu: MenuViewController = MenuViewController(nibName: nil, bundle: nil)
             menu.delegate = self
+            print("delegate set")
         }
         if segue.identifier == "detailSegue"{
             let cell = sender as! UICollectionViewCell

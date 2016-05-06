@@ -19,6 +19,8 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
     let images = ["greek", "etruscan", "roman", "lyre", "mosaic"]
 
     @IBOutlet weak var tableView: UITableView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -48,14 +50,17 @@ class MenuViewController: UIViewController, UITableViewDataSource, UITableViewDe
         cell.speciesLabel.text = title
        // print(title)
         cell.speciesImage.image = UIImage(named: images[indexPath.item])
-        
         return cell
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        // print("tapped")
+        print("tapped")
         self.delegate?.sendValues(endpoints[indexPath.item], spcie: species[indexPath.item], viewTyp: "menu")
         // print(species[indexPath.item])
+        var endpoint = indexPath.item
+        let defaults = NSUserDefaults.standardUserDefaults()
+        defaults.setObject(endpoint, forKey: "endpoint")
+        NSUserDefaults.standardUserDefaults().synchronize()
         dismissViewControllerAnimated(true, completion: {})
     }
 

@@ -116,7 +116,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" backgroundImage="Menu-500"/>
                                 <connections>
-                                    <segue destination="iIi-Mb-u2y" kind="presentation" identifier="menuSegue" id="dYV-pe-vva"/>
+                                    <segue destination="Yvf-DI-UQw" kind="presentation" identifier="menuSegue" id="qR8-cD-ikz"/>
                                 </connections>
                             </button>
                         </barButtonItem>
@@ -160,7 +160,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="onv-RU-Bz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807" y="-662"/>
+            <point key="canvasLocation" x="2619" y="-662"/>
         </scene>
         <!--Audio View Controller-->
         <scene sceneID="NeL-Ih-F6j">
@@ -284,7 +284,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Iby-bH-OU0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2212" y="-662"/>
+            <point key="canvasLocation" x="3024" y="-662"/>
         </scene>
         <!--Detail View Controller-->
         <scene sceneID="kcn-JU-rgw">
@@ -558,7 +558,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P06-Ob-gxF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1807" y="63"/>
+            <point key="canvasLocation" x="2619" y="63"/>
         </scene>
         <!--Twitter View Controller-->
         <scene sceneID="DXd-Ah-x3o">
@@ -601,7 +601,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DcN-Ej-KsF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2212" y="63"/>
+            <point key="canvasLocation" x="3024" y="63"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="kAV-Gt-LWd">
@@ -619,12 +619,12 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="3Y5-Ps-Ais">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                                    <rect key="frame" x="0.0" y="64" width="320" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuCell" rowHeight="44" id="VlR-Dl-Y7M" customClass="MenuTableViewCell" customModule="FordhamMuseum" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="48" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="112" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="VlR-Dl-Y7M" id="Cqx-2J-zKW">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
@@ -673,7 +673,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BmK-Zo-i2G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1382" y="63"/>
+            <point key="canvasLocation" x="2057" y="212"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Oaj-bX-BQH">
@@ -693,6 +693,27 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XVp-nh-eDs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1807" y="-1343"/>
+        </scene>
+        <!--Side Menu Navigation Controller-->
+        <scene sceneID="5tE-Cu-aC0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Yvf-DI-UQw" customClass="UISideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="07m-M8-WQh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="boolean" keyPath="leftSide" value="YES"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <segue destination="iIi-Mb-u2y" kind="relationship" relationship="rootViewController" id="ue9-Om-8VQ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dQk-iH-NNE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2057" y="-552"/>
         </scene>
     </scenes>
     <resources>
