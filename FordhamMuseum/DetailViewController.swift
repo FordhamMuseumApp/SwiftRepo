@@ -72,10 +72,22 @@ class DetailViewController: UIViewController, NSXMLParserDelegate{
         museumLabel.preferredMaxLayoutWidth = museumLabel.frame.size.width
         
         if let pointer = piece!["pointer"]{
+            var pointee = pointer.integerValue
             // http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmGetImageInfo/Hist/199/xml
-            let imagePath = "http://libdigcoll2.library.fordham.edu:2012/cgi-bin/getimage.exe?CISOROOT=/Hist&CISOPTR=\(pointer)&DMSCALE=5&DMWIDTH=\(posts[0]["width"]!)&DMHEIGHT=\(posts[0]["height"]!)&DMX=0&DMY=0&DMTEXT=&REC=1&DMTHUMB=1&DMROTATE=0%27"
+            if (pointer.integerValue == 251 || pointer.integerValue == 248 || pointer.integerValue == 256){
+                pointee = pointer.integerValue - 2
+            }
+            if (pointer.integerValue == 256){
+                pointee = 167
+            }
+
+            let imagePath = "http://libdigcoll2.library.fordham.edu:2012/cgi-bin/getimage.exe?CISOROOT=/Hist&CISOPTR=\(pointee)&DMSCALE=50&DMWIDTH=\(posts[0]["width"]!)&DMHEIGHT=\(posts[0]["height"]!)&DMX=0&DMY=0&DMTEXT=&REC=1&DMTHUMB=1&DMROTATE=0%27"
             let imageUrl: NSURL = NSURL(string: imagePath as String)!
             detailImage.setImageWithURL(imageUrl)
+            if detailImage.image == nil{
+                
+            }
+            print(imagePath)
         }
         
         // Do any additional setup after loading the view.
@@ -168,11 +180,11 @@ class DetailViewController: UIViewController, NSXMLParserDelegate{
             if let data = dataOrNil {
                 if let responseDictionary = try! NSJSONSerialization.JSONObjectWithData(data, options:[]) as? NSDictionary {
                     self.piece = responseDictionary
-                    print(self.piece)
+                   // print(self.piece)
                     self.cateloLabel.text = self.piece!["catelo"] as? String
                     self.dateLabel.text = self.piece!["langua"] as? String
                     if let audioUrl = self.piece!["audio"] as? String {
-                        print("audioset")
+                       // print("audioset")
                         self.isAudio = true
                        
                         self.aUrl = audioUrl
