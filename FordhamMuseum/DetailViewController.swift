@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 import AFNetworking
 
-class DetailViewController: UIViewController {
+class DetailViewController: UIViewController, NSXMLParserDelegate{
 
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var detailName: UILabel!
@@ -28,6 +28,13 @@ class DetailViewController: UIViewController {
     var aUrl: String?
     var isAudio = false
     
+    var parser = NSXMLParser()
+    var posts = NSMutableArray()
+    var elements = NSMutableDictionary()
+    var element = NSString()
+    var title1 = NSMutableString()
+    var date = NSMutableString()
+    
     
     var audioPlayer = AVPlayer()
     var isPlaying = false
@@ -39,20 +46,21 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        beginParsing()
+        
+        
         audioButton.hidden = true
         
         self.apiCall()
         
-        
+        print(posts[0]["height"]!)
         contentView.backgroundColor = UIColor.blackColor().colorWithAlphaComponent(0.7)
         contentView.layer.cornerRadius = 20
         
-        print(piece!)
-        
         detailName.text = self.piece!["title"] as? String
         materialHeightLabel.text = piece!["cultur"] as? String
-        dateLabel.text = piece!["date"] as? String
-        collectionCollectionNumberLabel.text = piece!["langua"] as? String
+        languaLabel.text = piece!["date"] as? String
+        collectionCollectionNumberLabel.text = "" as? String
         museumLabel.text = piece!["descri"] as? String
         
         cateloLabel.preferredMaxLayoutWidth = cateloLabel.frame.size.width
@@ -64,7 +72,8 @@ class DetailViewController: UIViewController {
         museumLabel.preferredMaxLayoutWidth = museumLabel.frame.size.width
         
         if let pointer = piece!["pointer"]{
-            let imagePath = "http://libdigcoll2.library.fordham.edu/utils/getthumbnail/collection/Hist/id/\(pointer)"
+            // http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmGetImageInfo/Hist/199/xml
+            let imagePath = "http://libdigcoll2.library.fordham.edu:2012/cgi-bin/getimage.exe?CISOROOT=/Hist&CISOPTR=\(pointer)&DMSCALE=5&DMWIDTH=\(posts[0]["width"]!)&DMHEIGHT=\(posts[0]["height"]!)&DMX=0&DMY=0&DMTEXT=&REC=1&DMTHUMB=1&DMROTATE=0%27"
             let imageUrl: NSURL = NSURL(string: imagePath as String)!
             detailImage.setImageWithURL(imageUrl)
         }
@@ -86,6 +95,50 @@ class DetailViewController: UIViewController {
         
         
         
+    }
+   
+    func beginParsing()
+    {
+        posts = []
+        parser = NSXMLParser(contentsOfURL:(NSURL(string:"http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmGetImageInfo/Hist/199/xml"))!)!
+        parser.delegate = self
+        parser.parse()
+    }
+    
+    func parser(parser: NSXMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String])
+    {
+        element = elementName
+        if (elementName as NSString).isEqualToString("imageinfo")
+        {
+            elements = NSMutableDictionary()
+            elements = [:]
+            title1 = NSMutableString()
+            title1 = ""
+            date = NSMutableString()
+            date = ""
+        }
+    }
+    
+    func parser(parser: NSXMLParser!, foundCharacters string: String!)
+    {
+        if element.isEqualToString("width") {
+            title1.appendString(string)
+        } else if element.isEqualToString("height") {
+            date.appendString(string)
+        }
+    }
+    
+    func parser(parser: NSXMLParser!, didEndElement elementName: String!, namespaceURI: String!, qualifiedName qName: String!)
+    {
+        if (elementName as NSString).isEqualToString("imageinfo") {
+            if !title1.isEqual(nil) {
+                elements.setObject(title1, forKey: "width")
+            }
+            if !date.isEqual(nil) {
+                elements.setObject(date, forKey: "height")
+            }
+            posts.addObject(elements)
+        }
     }
     
     func apiCall() {
@@ -117,7 +170,7 @@ class DetailViewController: UIViewController {
                     self.piece = responseDictionary
                     print(self.piece)
                     self.cateloLabel.text = self.piece!["catelo"] as? String
-                    self.languaLabel.text = ""
+                    self.dateLabel.text = self.piece!["langua"] as? String
                     if let audioUrl = self.piece!["audio"] as? String {
                         print("audioset")
                         self.isAudio = true
