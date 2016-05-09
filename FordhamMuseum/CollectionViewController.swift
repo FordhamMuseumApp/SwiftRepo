@@ -54,6 +54,8 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
         
         // Allow for editable label presentation:
         searchLabel.text = "Catalog of Museum Objects: \(specie)"
+        cancelButton.hidden = true
+        searchLabel.hidden = false
         
     }
     
@@ -201,7 +203,7 @@ class CollectionViewController: UIViewController, UICollectionViewDataSource, UI
             
         //coming from menu
         else if(viewType == "menu"){
-            api = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or/title!descri!langua!date!cultur!image/dateed/1024/0/0/0/0/0/json"
+            api = "http://libdigcoll2.library.fordham.edu:2012/dmwebservices/index.php?q=dmQuery/Hist/cultur^\(endpoint)^any^or/title!descri!audiob!date!cultur!image/dateed/1024/0/0/0/0/0/json"
         }
         // We also want fields: langua, creato, type, and catelo for the detail view controller. We want to sortby dateed
         
