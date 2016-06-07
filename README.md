@@ -1,6 +1,6 @@
 # *The Muse*
 
-**The Muse** is an iOS applicaion that brings the experience of the Fordham University Museum of Greek, Etruscan, and Roman Art into the digital age.
+**The Muse** is an iOS application that brings the experience of the Fordham University Museum of Greek, Etruscan, and Roman Art into the digital age.
 
 With the app you are able to navigate through the Museum's expansive collection, learn unique details about each object, and even listen to real Fordham students describing the objects.
 
@@ -9,6 +9,11 @@ With the app you are able to navigate through the Museum's expansive collection,
 <img src='http://i.imgur.com/Jdbp75v.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
+
+## Media Coverage
+
+**Fordham News** wrote an article describing the student-run exhibition that was put on in conjunction with the debut of The Muse appliction. Read on for quotes from the developers, students who recorded audio, and the director of the museum. 
+http://news.fordham.edu/university-news/student-curated-exhibit-illustrates-life-in-the-ancient-world/
 
 ## Future Goals 
 
