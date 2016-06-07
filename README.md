@@ -6,7 +6,7 @@ With the app you are able to navigate through the Museum's expansive collection,
 
 ## Gif of User Experience
 
-<img src='http://imgur.com/gallery/Jdbp75v/new' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='http://imgur.com/gallery/Jdbp75v/new.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
